@@ -1,3 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,700;1,700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Key frames for "welcome to my portfolio" */
+@keyframes onLoad {
+  100% {
+    opacity: 1;
+  }
+}
+/* paired animation class */
+.animate-onload {
+  animation: onLoad 1s ease-in-out forwards;
+}
+/* custom background */
+.bg-custom-black {
+  background-color: rgb(22, 22, 22);
+}
+.bg-custom-gray:hover {
+  background-color: rgb(51, 51, 51);
+  transition: 200ms ease-in-out;
+}
+.bg-custom-gray:active {
+  background-color: rgb(51, 51, 51);
+  outline-offset: 10px;
+  transition: 50ms ease-in-out;
+}
+.bg-custom-gray-active {
+  background-color: rgb(51, 51, 51);
+}
+/* font sizing */
+.font-custom-main {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.font-custom-main-sm {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.text-40 {
+  font-size: 40px;
+}
+/* min height criteria */
+.m-h-50dvh {
+  min-height: 80dvh;
+}
+.m-h-20dvh {
+  min-height: 20dvh;
+}
+.m-h-600dvh {
+  min-height: 200dvh;
+}
+/* outline class */
+.outline-custom-main {
+  outline: 1px solid rgb(51, 51, 51);
+}
