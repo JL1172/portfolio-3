@@ -60,7 +60,7 @@ export default function NavbarSection() {
         />
           <div
             className={
-              navBarMobileVisible ? "side-drawer-open pt-10" : "side-drawer-closed pt-10"
+              navBarMobileVisible ? "side-drawer-open pt-6" : "side-drawer-closed pt-10"
             }
           >
             <IoMdClose
