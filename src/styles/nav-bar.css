@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+#icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+#icon:hover {
+  outline: 1px solid rgb(51, 51, 51);
+  border-radius: 10px;
+}
+#icon-close {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  margin: 0.5rem;
+  right: 0;
+  top: 0;
+  transition: 0.2s ease-in-out;
+}
+#icon-close:hover {
+  transform: rotate(45deg);
+  transition: 0.2s ease-in-out;
+}
+/* side drawer functionality in */
+.side-drawer-closed {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  z-index: 2;
+  background-color: rgb(22, 22, 22);
+  border: 1px solid rgb(51, 51, 51);
+  top: 0;
+  right: 0;
+  width: 33%;
+  height: 50dvh;
+  transform-origin: right;
+  transform: scaleX(0%);
+  transition: 200ms ease-in-out;
+}
+
+.side-drawer-open {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  z-index: 2;
+  background-color: rgb(22, 22, 22);
+  border: 1px solid rgb(51, 51, 51);
+  top: 0;
+  right: 0;
+  width: 33%;
+  height: 50dvh;
+  transform-origin: right;
+  transform: scaleX(100%);
+  transition: 200ms ease-in-out;
+}
+
+#a1 {
+  opacity: 0;
+  animation: slide 200ms ease-in-out forwards;
+  animation-delay: 100ms;
+}
+#a2 {
+  opacity: 0;
+  animation: slide 200ms ease-in-out forwards;
+  animation-delay: 150ms;
+}
+#a3 {
+  opacity: 0;
+  animation: slide 200ms ease-in-out forwards;
+  animation-delay: 200ms;
+}
+#a4 {
+  opacity: 0;
+  animation: slide 200ms ease-in-out forwards;
+  animation-delay: 250ms;
+}
+#a5 {
+  opacity: 0;
+  animation: slide 200ms ease-in-out forwards;
+  animation-delay: 300ms;
+}
+.slider-animation::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  background-color: rgb(51, 51, 51);
+  opacity: 0;
+  height: 2.5rem;
+  width: 100%;
+  transform-origin: left;
+  transform: scaleX(0%);
+  transition: 0.1s ease-in-out;
+}
+.slider-animation:hover::before {
+  transform-origin: left;
+  left: 0;
+  opacity: 1;
+  transform: scaleX(100%);
+  transition: 0.2s ease-in-out;
+}
+@media screen and (max-width: 500px) {
+  #icon,
+  #icon-close {
+    width: 2rem;
+    height: 2rem;
+  }
+  #icon-close {
+    margin: 0.5rem;
+  }
+}

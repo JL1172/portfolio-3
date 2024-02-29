@@ -56,18 +56,10 @@
 .m-h-600dvh {
   min-height: 200dvh;
 }
+.h-20dvh {
+  height: 20dvh;
+}
 /* outline class */
 .outline-custom-main {
   outline: 1px solid rgb(51, 51, 51);
-}
-#icon {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-@media screen and (max-width: 500px) {
-  #icon {
-    width: 2rem;
-    height: 2rem;
-  }
 }

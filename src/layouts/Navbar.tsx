@@ -1,15 +1,24 @@
-import { useState } from "react";
+import { ReactElement, useState } from "react";
 import { MdOutlineMenu } from "react-icons/md";
+import { IoMdClose } from "react-icons/io";
+import { GoStack } from "react-icons/go";
+import { GrProjects } from "react-icons/gr";
+import { CgProfile } from "react-icons/cg";
+import { MdContactPage } from "react-icons/md";
+import { RiNewspaperLine } from "react-icons/ri";
+import "../styles/nav-bar.css";
 
-const links: Record<string, string>[] = [
-  { to: "#about", content: "About" },
-  { to: "#techstack", content: "Tech Stack" },
-  { to: "#projects", content: "Projects" },
-  { to: "#resume", content: "Resume" },
-  { to: "#contact", content: "Contact Me" },
+const links: Record<string, string | ReactElement>[] = [
+  { to: "#about", content: "About", icon: <CgProfile /> },
+  { to: "#techstack", content: "Tech Stack", icon: <GoStack /> },
+  { to: "#projects", content: "Projects", icon: <GrProjects /> },
+  { to: "#resume", content: "Resume", icon: <RiNewspaperLine /> },
+  { to: "#contact", content: "Contact Me", icon: <MdContactPage /> },
 ];
 export default function NavbarSection() {
   const [active, setActive] = useState<number | null>(null);
+  const [navBarMobileVisible, setNavBarMobileVisible] =
+    useState<boolean>(false);
   return (
     <div className="text-white m-h-20dvh flex items-center xxs:pl-3 xxs:pt-3 pl-6 w-full justify-between">
       <div className="flex flex-col">
@@ -21,23 +30,52 @@ export default function NavbarSection() {
         </div>
       </div>
       <div className=" xxs:hidden xs:hidden sm:hidden md:flex md:pr-0 pr-6 flex justify-evenly font-custom-main-sm">
-        {links.map((n: Record<string, string>, i: number) => {
+        {links.map((n: Record<string, string | ReactElement>, i: number) => {
           return (
             <a
               onClick={() => setActive(i)}
-              className={`flex items-center justify-center mr-6 outline-custom-main md:w-20 md:text-sm lg:28 h-8 rounded-lg bg-custom-gray ${
+              className={`flex items-center justify-center mr-6 outline-custom-main md:w-20 md:text-sm lg:w-28 h-8 rounded-lg bg-custom-gray ${
                 active === i ? "bg-custom-gray-active" : ""
               }`}
               key={i}
-              href={n.to}
+              href={String(n.to)}
             >
               <div>{n.content}</div>
             </a>
           );
         })}
       </div>
-      <div className="xxs:mr-2 xs:flex sm:flex md:hidden lg:hidden xs:mr-10 md:mr-10">
-        <MdOutlineMenu id="icon" style={{ color: "white" }} />
+      <div className="xxs:mr-2 xs:flex sm:flex md:hidden lg:hidden xs:mr-10 md:mr-10 ">
+        <MdOutlineMenu
+          onClick={() => setNavBarMobileVisible(!navBarMobileVisible)}
+          id="icon"
+          style={{ color: "white" }}
+        />
+          <div
+            className={
+              navBarMobileVisible ? "side-drawer-open pt-10" : "side-drawer-closed pt-10"
+            }
+          >
+            <IoMdClose
+              onClick={() => setNavBarMobileVisible(false)}
+              id="icon-close"
+            />
+            {navBarMobileVisible && links.map(
+              (n: Record<string, string | ReactElement>, i: number) => {
+                return (
+                  <a
+                  id = {`a${i + 1}`}
+                  className="relative"
+                    onClick={() => setNavBarMobileVisible(false)}
+                    key={i}
+                    href={String(n.to)}
+                  >
+                    <div className="flex items-center pl-5 text-lg hover:text-slate-300 h-fill slider-animation">{n.icon}{n.content}</div>
+                  </a>
+                );
+              }
+            )}
+          </div>
       </div>
     </div>
   );
