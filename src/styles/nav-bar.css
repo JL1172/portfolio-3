@@ -115,6 +115,10 @@
   transform: scaleX(100%);
   transition: 0.2s ease-in-out;
 }
+.text-custom {
+  color: gray;
+}
+
 @media screen and (max-width: 500px) {
   #icon,
   #icon-close {
