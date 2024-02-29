@@ -1,6 +1,7 @@
 import { createContext } from "react";
 
-const initialState: Record<string, boolean | string> = {
-    global_dim: false,
+type GlobalContextType = {
+    changeBrightness: () => void;
+    isDim: boolean;
 }
-export const GlobalContext = createContext(initialState);
+export const GlobalContext = createContext<GlobalContextType | undefined>(undefined);

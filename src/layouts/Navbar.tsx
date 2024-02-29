@@ -1,4 +1,4 @@
-import { ReactElement, useState } from "react";
+import { ReactElement, useContext, useState } from "react";
 import { MdOutlineMenu } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import { GoStack } from "react-icons/go";
@@ -7,6 +7,7 @@ import { CgProfile } from "react-icons/cg";
 import { MdContactPage } from "react-icons/md";
 import { RiNewspaperLine } from "react-icons/ri";
 import "../styles/nav-bar.css";
+import { GlobalContext } from "../contexts/GlobalContext";
 
 const links: Record<string, string | ReactElement>[] = [
   { to: "#about", content: "About", icon: <CgProfile /> },
@@ -19,13 +20,19 @@ export default function NavbarSection() {
   const [active, setActive] = useState<number | null>(null);
   const [navBarMobileVisible, setNavBarMobileVisible] =
     useState<boolean>(false);
+  const ctx = useContext(GlobalContext);
+
+  const visibilityHandler = () => {
+    setNavBarMobileVisible(!navBarMobileVisible);
+    ctx?.changeBrightness()
+  }
   return (
     <div className="text-white m-h-20dvh flex items-center xxs:pl-3 xxs:pt-3 pl-6 w-full justify-between">
       <div className="flex flex-col">
-        <div className="xl:text-5xl lg:text-5xl xs:text-4xl xxs:text-3xl font-custom-main opacity-0 animate-onload xxs:mt-4">
+        <div className={`xl:text-5xl lg:text-5xl xs:text-4xl xxs:text-3xl font-custom-main opacity-0 animate-onload xxs:mt-4 ${ctx?.isDim ? "brightness-25" : "brightness-100"}`}>
           Welcome To
         </div>
-        <div className="xl:text-5xl lg:text-5xl xs:text-4xl xxs:text-3xl font-custom-main opacity-0 animate-onload xxs:mt-4">
+        <div className={`xl:text-5xl lg:text-5xl xs:text-4xl xxs:text-3xl font-custom-main opacity-0 animate-onload xxs:mt-4 ${ctx?.isDim ? "brightness-25" : "brightness-100"}`}>
           My Portfolio
         </div>
       </div>
@@ -47,7 +54,7 @@ export default function NavbarSection() {
       </div>
       <div className="xxs:mr-2 xs:flex sm:flex md:hidden lg:hidden xs:mr-10 md:mr-10 ">
         <MdOutlineMenu
-          onClick={() => setNavBarMobileVisible(!navBarMobileVisible)}
+          onClick={() => visibilityHandler()}
           id="icon"
           style={{ color: "white" }}
         />
@@ -57,7 +64,7 @@ export default function NavbarSection() {
             }
           >
             <IoMdClose
-              onClick={() => setNavBarMobileVisible(false)}
+              onClick={() => visibilityHandler()}
               id="icon-close"
             />
             {navBarMobileVisible && links.map(
@@ -66,7 +73,7 @@ export default function NavbarSection() {
                   <a
                   id = {`a${i + 1}`}
                   className="relative"
-                    onClick={() => setNavBarMobileVisible(false)}
+                    onClick={() => visibilityHandler()}
                     key={i}
                     href={String(n.to)}
                   >

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useState } from "react";
 import { GlobalContext } from "./contexts/GlobalContext";
 import NavbarSection from "./layouts/Navbar";
 import AboutSection from "./pages/About";
@@ -9,9 +9,12 @@ import ResumeSection from "./pages/Resume";
 import TechStackSection from "./pages/TechStack";
 
 function App() {
-  const {global_dim} = useContext(GlobalContext);
+  const [isDim, setIsDim] = useState<boolean>(false);
+  const changeBrightness = () => {
+    setIsDim(!isDim);
+  };
   return (
-    <GlobalContext.Provider value = {{global_dim}}>
+    <GlobalContext.Provider value={{ changeBrightness, isDim }}>
       <div className="text-white flex font-custom-main flex-col justify-evenly items-start h-auto m-h-600dvh bg-custom-black">
         <NavbarSection />
         <HomeSection />

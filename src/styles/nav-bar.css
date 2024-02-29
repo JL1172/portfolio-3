@@ -124,4 +124,7 @@
   #icon-close {
     margin: 0.5rem;
   }
+  .side-drawer-closed, .side-drawer-open {
+    width: 50%;
+  }
 }
