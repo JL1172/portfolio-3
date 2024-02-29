@@ -1,6 +1,334 @@
+@keyframes typewriter {
+  0% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .w-90p {
-    width: 90%;
+  width: 90%;
 }
 .h-60dvh {
-    height: 60dvh;
+  height: 60dvh;
 }
+
+/* first line  */
+.p-first-1 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 20ms;
+  }
+  .p-first-2 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 40ms;
+  }
+  .p-first-3 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 60ms;
+  }
+  .p-first-4 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 80ms;
+  }
+  .p-first-5 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 100ms;
+  }
+  .p-first-6 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 120ms;
+  }
+  .p-first-7 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 140ms;
+  }
+  .p-first-8 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 160ms;
+  }
+  .p-first-9 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 180ms;
+  }
+  .p-first-10 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 200ms;
+  }
+  .p-first-11 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 220ms;
+  }
+  /* second line */
+  .p-second-1 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 240ms;
+  }
+  .p-second-2 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 260ms;
+  }
+  .p-second-3 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 280ms;
+  }
+  .p-second-4 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 300ms;
+  }
+  .p-second-5 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 320ms;
+  }
+  .p-second-6 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 340ms;
+  }
+  .p-second-7 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 360ms;
+  }
+  .p-second-8 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 380ms;
+  }
+  .p-second-9 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 400ms;
+  }
+  .p-second-10 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 420ms;
+  }
+  .p-second-11 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 440ms;
+  }
+  .p-second-12 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 460ms;
+  }
+  .p-second-13 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 480ms;
+  }
+  .p-second-14 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 500ms;
+  }
+  .p-second-15 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 520ms;
+  }
+  .p-second-16 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 540ms;
+  }
+  .p-second-17 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 560ms;
+  }
+  .p-second-18 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 580ms;
+  }
+  .p-second-19 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 600ms;
+  }
+  .p-second-20 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 620ms;
+  }
+  .p-second-21 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 640ms;
+  }
+  .p-second-22 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 660ms;
+  }
+  .p-second-23 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 680ms;
+  }
+  .p-second-24 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 700ms;
+  }
+  .p-second-25 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 720ms;
+  }
+  .p-second-26 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 740ms;
+  }
+  .p-second-27 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 760ms;
+  }
+  .p-third-1 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 780ms;
+  }
+  .p-third-2 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 800ms;
+  }
+  .p-third-3 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 820ms;
+  }
+  .p-third-4 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 840ms;
+  }
+  .p-third-5 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 860ms;
+  }
+  .p-third-6 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 880ms;
+  }
+  .p-third-7 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 900ms;
+  }
+  .p-third-8 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 920ms;
+  }
+  .p-third-9 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 940ms;
+  }
+  .p-third-10 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 960ms;
+  }
+  .p-third-11 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 980ms;
+  }
+  .p-third-12 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 1000ms;
+  }
+  .p-third-13 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 1020ms;
+  }
+  .p-third-14 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 1040ms;
+  }
+  .p-third-15 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 1060ms;
+  }
+  .p-third-16 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 1080ms;
+  }
+  .p-third-17 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 1100ms;
+  }
+  .p-third-18 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 1120ms;
+  }
+  .p-third-19 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 1140ms;
+  }
+  .p-third-20 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 1160ms;
+  }
+  .p-third-21 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 1180ms;
+  }
+  .p-third-22 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 1200ms;
+  }
+  .p-third-23 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 1220ms;
+  }
+  .p-third-24 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 1240ms;
+  }
+  .p-third-25 {
+    opacity: 0;
+    animation: typewriter 0.5s ease-in-out forwards;
+    animation-delay: 1260ms;
+  }
+  

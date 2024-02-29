@@ -13,9 +13,9 @@ const stats: Record<string, string>[] = [
     content2: "Invaluable Asset At Your Company",
   },
 ];
-const splitWordsFirst: string[] = "I AM JACOB,".split(",");
-const splitWordsSecond: string[] = "I AM A FULL STACK DEVELOPER".split(",");
-const splitWordsThird: string[] = "WITH CUTTING EDGE SKILLS.".split(",");
+const splitWordsFirst: string[] = "I AM JACOB.".split("");
+const splitWordsSecond: string[] = "I AM A FULL STACK DEVELOPER".split("");
+const splitWordsThird: string[] = "WITH CUTTING EDGE SKILLS.".split("");
 export default function HomeSection() {
   const ctx = useContext(GlobalContext);
   return (
@@ -36,7 +36,7 @@ export default function HomeSection() {
             {splitWordsFirst.map((n: string, i: number) => {
               return (
                 <p className={`p-first-${i + 1}`} key={i}>
-                  {n}
+                  {n.trim() ? n : <span className="opacity-0">i</span>}
                 </p>
               );
             })}
@@ -45,7 +45,7 @@ export default function HomeSection() {
             {splitWordsSecond.map((n: string, i: number) => {
               return (
                 <p className={`p-second-${i + 1}`} key={i}>
-                  {n}
+                  {n.trim() ? n : <span className="opacity-0">i</span>}
                 </p>
               );
             })}
@@ -54,7 +54,7 @@ export default function HomeSection() {
             {splitWordsThird.map((n: string, i: number) => {
               return (
                 <p className={`p-third-${i + 1}`} key={i}>
-                  {n}
+                  {n.trim() ? n : <span className="opacity-0">i</span>}
                 </p>
               );
             })}
@@ -71,10 +71,15 @@ export default function HomeSection() {
       <div className="flex justify-evenly min-h-48 items-center mt-10 mb-10">
         {stats.map((n: Record<string, string>, i: number) => {
           return (
-            <div className="flex flex-col min-h-24 h-auto w-40 items-center text-center" key={i}>
+            <div
+              className="flex flex-col min-h-24 h-auto w-40 items-center text-center"
+              key={i}
+            >
               <div className="text-2xl">{n.stat}</div>
               <div className="text-custom text-sm">{n.content}</div>
-              {n.content2 && <div className="text-custom text-sm">{n.content2}</div>}
+              {n.content2 && (
+                <div className="text-custom text-sm">{n.content2}</div>
+              )}
             </div>
           );
         })}
