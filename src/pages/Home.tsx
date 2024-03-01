@@ -35,7 +35,7 @@ export default function HomeSection() {
           <div className="flex">
             {splitWordsFirst.map((n: string, i: number) => {
               return (
-                <p className={`p-first-${i + 1}`} key={i}>
+                <p className={`p-first-${i + 1} xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-5xl`} key={i}>
                   {n.trim() ? n : <span className="opacity-0">i</span>}
                 </p>
               );
@@ -44,7 +44,7 @@ export default function HomeSection() {
           <div className="flex">
             {splitWordsSecond.map((n: string, i: number) => {
               return (
-                <p className={`p-second-${i + 1}`} key={i}>
+                <p className={`p-second-${i + 1} xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-5xl`} key={i}>
                   {n.trim() ? n : <span className="opacity-0">i</span>}
                 </p>
               );
@@ -53,7 +53,7 @@ export default function HomeSection() {
           <div className="flex">
             {splitWordsThird.map((n: string, i: number) => {
               return (
-                <p className={`p-third-${i + 1}`} key={i}>
+                <p className={`p-third-${i + 1} xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-5xl`} key={i}>
                   {n.trim() ? n : <span className="opacity-0">i</span>}
                 </p>
               );
@@ -68,17 +68,17 @@ export default function HomeSection() {
           alt="Picture Of Javascript"
         />
       </div>
-      <div className="flex justify-evenly min-h-48 items-center mt-10 mb-10">
+      <div className="flex justify-evenly items-center mb-16 mt-20 min-h-28">
         {stats.map((n: Record<string, string>, i: number) => {
           return (
             <div
-              className="flex flex-col min-h-24 h-auto w-40 items-center text-center"
+              className="flex flex-col items-center text-center md:min-h-36 xxs:w-20 xxs:min-h-28"
               key={i}
             >
-              <div className="text-2xl">{n.stat}</div>
-              <div className="text-custom text-sm">{n.content}</div>
+              <div className="text-2xl ">{n.stat}</div>
+              <div className="text-custom xxs:text-xs md:text-sm">{n.content}</div>
               {n.content2 && (
-                <div className="text-custom text-sm">{n.content2}</div>
+                <div className="text-custom xxs:text-xs md:text-sm">{n.content2}</div>
               )}
             </div>
           );

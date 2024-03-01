@@ -29,10 +29,10 @@ export default function NavbarSection() {
   return (
     <div className="text-white m-h-20dvh flex items-center xxs:pl-3 xxs:pt-3 pl-6 w-full justify-between">
       <div className="flex flex-col">
-        <div className={`xl:text-5xl lg:text-5xl xs:text-4xl xxs:text-3xl font-custom-main opacity-0 animate-onload xxs:mt-4 ${ctx?.isDim ? "brightness-25" : "brightness-100"}`}>
+        <div className={`xl:text-5xl lg:text-5xl sm:text-4xl xs:text-3xl xxs:text-2xl opacity-0 animate-onload xxs:mt-4 ${ctx?.isDim ? "brightness-25" : "brightness-100"}`}>
           Welcome To
         </div>
-        <div className={`xl:text-5xl lg:text-5xl xs:text-4xl xxs:text-3xl font-custom-main opacity-0 animate-onload xxs:mt-4 ${ctx?.isDim ? "brightness-25" : "brightness-100"}`}>
+        <div className={`xl:text-5xl lg:text-5xl sm:text-4xl xs:text-3xl xxs:text-2xl opacity-0 animate-onload xxs:mt-4 ${ctx?.isDim ? "brightness-25" : "brightness-100"}`}>
           My Portfolio
         </div>
       </div>
