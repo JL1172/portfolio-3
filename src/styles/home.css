@@ -1,10 +1,12 @@
 @keyframes typewriter {
   0% {
     transform: translateY(-8px);
+    color: dodgerblue;
   }
   100% {
     transform: translateY(0);
     opacity: 1;
+    color: white;
   }
 }
 .w-90p {

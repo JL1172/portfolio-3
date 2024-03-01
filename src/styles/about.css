@@ -1,0 +1,38 @@
+@keyframes highlight {
+    100% {
+        transform: translateX(1000%);
+        display: none;
+    }
+}
+.intersection-invisible, .intersection-invisible-two, .intersection-invisible-three, .heading-invisible {
+    opacity: 0;
+}
+.intersection-visible {
+    opacity: 1;
+    transition: 1.5s ease-in-out;
+}
+.intersection-visible-two {
+    opacity: 1;
+    transition: 1.5s ease-in-out;
+    transition-delay: 1s;
+}
+.intersection-visible-three {
+    opacity: 1;
+    transition: 1.5s ease-in-out;
+    transition-delay: 1.5s;
+}
+.heading-visible {
+    opacity: 1;
+    color: white;
+}
+.heading-visible::before {
+    content: "";
+    position: absolute;
+    background-color: royalblue;
+    z-index: -1;
+    width: 5rem;
+    height: 2.5rem;
+    left: 0;
+    transform-origin: left;
+    animation: .5s highlight ease-in forwards;
+}
