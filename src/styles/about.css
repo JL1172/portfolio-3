@@ -1,38 +1,94 @@
-@keyframes highlight {
-    100% {
-        transform: translateX(1000%);
-        display: none;
-    }
-}
-.intersection-invisible, .intersection-invisible-two, .intersection-invisible-three, .heading-invisible {
-    opacity: 0;
-}
-.intersection-visible {
-    opacity: 1;
-    transition: 1.5s ease-in-out;
-}
-.intersection-visible-two {
-    opacity: 1;
-    transition: 1.5s ease-in-out;
-    transition-delay: 1s;
-}
-.intersection-visible-three {
-    opacity: 1;
-    transition: 1.5s ease-in-out;
-    transition-delay: 1.5s;
-}
-.heading-visible {
+@keyframes leftSlider {
+  100% {
     opacity: 1;
     color: white;
+    transform: translateX(0%);
+  }
 }
-.heading-visible::before {
-    content: "";
-    position: absolute;
-    background-color: royalblue;
-    z-index: -1;
-    width: 5rem;
-    height: 2.5rem;
-    left: 0;
-    transform-origin: left;
-    animation: .5s highlight ease-in forwards;
+@keyframes rightSlider {
+  100% {
+    color: white;
+    opacity: 1;
+    transform: scaleX(100%);
+  }
+}
+
+@keyframes color-cycle {
+  100% {
+    width: 100%;
+    color: rgb(239 68 68);
+  }
+}
+.heading-invisible {
+  opacity: 0;
+}
+.intersection-invisible {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.intersection-invisible-two {
+  opacity: 0;
+  transform: scaleX(0%);
+}
+.intersection-invisible-three {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.intersection-visible {
+  color: royalblue;
+  animation: leftSlider 0.5s ease-in-out forwards;
+}
+.intersection-visible-two {
+  color: royalblue;
+  transform-origin: right;
+  animation: rightSlider 0.5s ease-in-out forwards;
+  animation-delay: 200ms;
+}
+.intersection-visible-three {
+  color: royalblue;
+  animation: leftSlider 0.5s ease-in-out forwards;
+  animation-delay: 400ms;
+}
+.heading-visible {
+  opacity: 1;
+  color: white;
+}
+
+.h-word {
+  color: white;
+  animation: color-cycle 1s alternate forwards; /* Apply animation here */
+  animation-delay: 500ms;
+}
+
+.h-word-two {
+  color: white;
+  animation: color-cycle 1s alternate forwards; /* Apply animation here */
+  animation-delay: 650ms;
+}
+.h-word-three {
+  color: white;
+  animation: color-cycle 1s alternate forwards; /* Apply animation here */
+  animation-delay: 800ms;
+}
+.h-word-four {
+  color: white;
+  animation: color-cycle 1s alternate forwards; /* Apply animation here */
+  animation-delay: 950ms;
+}
+.h-word-five {
+  color: white;
+  animation: color-cycle 1s alternate forwards; /* Apply animation here */
+  animation-delay: 1100ms;
+}
+.h-word-six {
+  color: white;
+  animation: color-cycle 1s alternate forwards; /* Apply animation here */
+  animation-delay: 1250ms;
+}
+
+.h-word-seven {
+  color: white;
+  overflow: hidden;
+  animation: color-cycle 1s alternate forwards; /* Apply animation here */
+  animation-delay: 1400ms;
 }

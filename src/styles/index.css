@@ -46,9 +46,15 @@
 .text-40 {
   font-size: 40px !important;
 }
+.w-90p {
+  width: 90%;
+}
 /* min height criteria */
 .m-h-80dvh {
   min-height: 80dvh;
+}
+.m-h-50dvh {
+  min-height: 50dvh;
 }
 .m-h-20dvh {
   min-height: 20dvh;
@@ -65,4 +71,7 @@
 }
 .brightness-25 {
   filter: brightness(25%);
+}
+.w-90p {
+  width: 90%;
 }

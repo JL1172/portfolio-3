@@ -20,17 +20,17 @@ export default function HomeSection() {
   const ctx = useContext(GlobalContext);
   return (
     <div
-      className={`text-white flex flex-col justify-evenly bg-custom-main outline-custom-main min-h-screen w-full h-auto mt-10 ${
+      className={`text-white flex flex-col justify-evenly bg-custom-main outline-custom-main min-h-screen w-full h-auto ${
         ctx?.isDim ? "brightness-25" : "brightness-100"
       }`}
     >
       <div className="w-full flex justify-center">
-        <div className="flex items-center w-90p text-slate-400 cursor-pointer mt-20">
+        <div className="flex items-center w-90p text-slate-400 cursor-pointer mt-14">
           <CiGlobe style={{ color: "white" }} />
           Wilmington, DE, USA
         </div>
       </div>
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center font-custom-main-sm">
         <div className="text-4xl w-90p flex flex-col h-64 justify-evenly mt-3">
           <div className="flex">
             {splitWordsFirst.map((n: string, i: number) => {
@@ -63,7 +63,7 @@ export default function HomeSection() {
       </div>
       <div className="w-full flex justify-center">
         <img
-          className="w-90p h-60dvh rounded-xl"
+          className="w-90p h-60dvh rounded-lg"
           src={home}
           alt="Picture Of Javascript"
         />
