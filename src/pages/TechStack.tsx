@@ -40,35 +40,47 @@ export default function TechStackSection() {
           : "backend-closed"
       }`}
     >
-      <div className="text-4xl font-bold">TECH STACK</div>
-      <div className="min-w-full w-fit m-h-60dvh h-fit flex items-center justify-evenly">
-        {categories.map((n, i) => {
-          return (
-            <div
-              className={`outline-custom-main min-h-80 h-fit lg:w-80 md:w-56 sm:w-48 xs:w-2/3 lg:mx-4 md:mx-0 sm:mx-0 xs:mx-0 xxs:mx-0 flex flex-col items-center justify-evenly`}
-              key={i}
-            >
-              <div>{n.cat_icon}</div>
-              <Button
-                onClick={() => changeChoice(i)}
-                className="font-bold lg:w-3/4 md:w-11/12 sm:w-11/12 xs:w-11/12 h-8"
-                sx={{
-                  bgcolor: "white",
-                  color: "black",
-                  fontSize: "12px",
-                  "&:hover": {
-                    bgcolor: n.cat_color,
-                  },
-                }}
-                id="button"
-                variant="contained"
-              >
-                My {n.cat_type} Skills
-              </Button>
-            </div>
-          );
-        })}
-      </div>
+      {persistedChoice === null ? (
+        <>
+          <div className="text-4xl font-bold">TECH STACK</div>
+          <div className="min-w-full w-fit m-h-60dvh h-fit flex items-center justify-evenly">
+            {categories.map((n, i) => {
+              return (
+                <div
+                  className={`outline-custom-main min-h-80 h-fit lg:w-80 md:w-56 sm:w-48 xs:w-2/3 lg:mx-4 md:mx-0 sm:mx-0 xs:mx-0 xxs:mx-0 flex flex-col items-center justify-evenly`}
+                  key={i}
+                >
+                  <div>{n.cat_icon}</div>
+                  <Button
+                    onClick={() => changeChoice(i)}
+                    className="font-bold lg:w-3/4 md:w-11/12 sm:w-11/12 xs:w-11/12 h-8"
+                    sx={{
+                      bgcolor: "white",
+                      color: "black",
+                      fontSize: "12px",
+                      "&:hover": {
+                        bgcolor: n.cat_color,
+                      },
+                    }}
+                    id="button"
+                    variant="contained"
+                  >
+                    My {n.cat_type} Skills
+                  </Button>
+                </div>
+              );
+            })}
+          </div>
+        </>
+      ) : persistedChoice === 0 ? (
+        <div onClick={() => setPersistedChoice(null)} className="backend-text">
+          backend
+        </div>
+      ) : (
+        <div onClick={() => setPersistedChoice(null)} className="backend-text">
+          frontend
+        </div>
+      )}
     </div>
   );
 }
