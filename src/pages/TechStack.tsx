@@ -24,7 +24,7 @@ export default function TechStackSection() {
   };
   const ctx = useContext(GlobalContext);
   return (
-    <div
+    <div id = "techstack"
       // id = {currentChoice === 1 ? "frontend-curtain" : "frontend-closed"}
       className={`text-white flex flex-col justify-center items-center mt-10 bg-custom-main outline-custom-main m-h-80dvh h-fit w-full relative ${
         ctx?.isDim ? "brightness-25" : "brightness-100"
