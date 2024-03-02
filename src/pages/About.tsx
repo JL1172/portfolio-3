@@ -116,7 +116,7 @@ export default function AboutSection() {
     h_seven.forEach((element) => observerHSeven.observe(element));
   }, []);
   return (
-    <div
+    <div id = "about"
       className={`relative text-white flex flex-col items-center justify-center bg-custom-main outline-custom-main m-h-80dvh h-auto w-full mt-10 ${
         ctx?.isDim ? "brightness-25" : "brightness-100"
       }`}

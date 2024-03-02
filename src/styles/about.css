@@ -5,13 +5,6 @@
     transform: translateX(0%);
   }
 }
-@keyframes rightSlider {
-  100% {
-    color: white;
-    opacity: 1;
-    transform: scaleX(100%);
-  }
-}
 
 @keyframes color-cycle {
   100% {
@@ -28,7 +21,7 @@
 }
 .intersection-invisible-two {
   opacity: 0;
-  transform: scaleX(0%);
+  transform: translateX(-100%);
 }
 .intersection-invisible-three {
   opacity: 0;
@@ -41,13 +34,12 @@
 .intersection-visible-two {
   color: royalblue;
   transform-origin: right;
-  animation: rightSlider 0.5s ease-in-out forwards;
-  animation-delay: 200ms;
-}
+  animation: leftSlider 0.5s ease-in-out forwards;
+  animation-delay: 100ms}
 .intersection-visible-three {
   color: royalblue;
   animation: leftSlider 0.5s ease-in-out forwards;
-  animation-delay: 400ms;
+  animation-delay: 200ms;
 }
 .heading-visible {
   opacity: 1;
@@ -63,32 +55,32 @@
 .h-word-two {
   color: white;
   animation: color-cycle 1s alternate forwards; /* Apply animation here */
-  animation-delay: 650ms;
+  animation-delay: 500ms;
 }
 .h-word-three {
   color: white;
   animation: color-cycle 1s alternate forwards; /* Apply animation here */
-  animation-delay: 800ms;
+  animation-delay: 500ms;
 }
 .h-word-four {
   color: white;
   animation: color-cycle 1s alternate forwards; /* Apply animation here */
-  animation-delay: 950ms;
+  animation-delay: 500ms;
 }
 .h-word-five {
   color: white;
   animation: color-cycle 1s alternate forwards; /* Apply animation here */
-  animation-delay: 1100ms;
+  animation-delay: 500ms;
 }
 .h-word-six {
   color: white;
   animation: color-cycle 1s alternate forwards; /* Apply animation here */
-  animation-delay: 1250ms;
+  animation-delay: 500ms;
 }
 
 .h-word-seven {
   color: white;
   overflow: hidden;
   animation: color-cycle 1s alternate forwards; /* Apply animation here */
-  animation-delay: 1400ms;
+  animation-delay: 500ms;
 }

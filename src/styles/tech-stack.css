@@ -1,0 +1,113 @@
+.w-50p {
+    width: 50%;
+}
+.m-w-90p {
+    min-width: 90%;
+}
+#button {
+    padding: 0;
+}
+
+.backend-closed::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left:0;
+    z-index: 10;
+    width: 50%;
+    background-color: #E0234E;
+    transform-origin: left;
+    transform: scaleX(0%);
+    transition: .5s ease-in-out;
+}
+.backend-closed::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    right:0;
+    z-index: 10;
+    width: 50%;
+    background-color: #E0234E;
+    transform-origin: right;
+    transform: scaleX(0%);
+    transition: .5s ease-in-out;
+}
+.backend-curtain::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left:0;
+    z-index: 10;
+    width: 50%;
+    transform-origin: left;
+    background-color: #E0234E;
+    transform: scaleX(100%);
+    transition: .5s ease-in-out;
+}
+.backend-curtain::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    right:0;
+    z-index: 10;
+    width: 50%;
+    transform-origin: right;
+    background-color: #E0234E;
+    transform: scaleX(100%);
+    transition: .5s ease-in-out;
+}
+.frontend-closed::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left:0;
+    z-index: 10;
+    width: 50%;
+    background-color: rgb(97, 219, 251);
+    transform-origin: left;
+    transform: scaleX(0%);
+    transition: .5s ease-in-out;
+}
+.frontend-closed::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    right:0;
+    z-index: 10;
+    width: 50%;
+    background-color: rgb(97, 219, 251);
+    transform-origin: right;
+    transform: scaleX(0%);
+    transition: .5s ease-in-out;
+}
+.frontend-curtain::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left:0;
+    z-index: 10;
+    width: 50%;
+    transform-origin: left;
+    background-color: rgb(97, 219, 251);
+    transform: scaleX(100%);
+    transition: .5s ease-in-out;
+}
+.frontend-curtain::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    right:0;
+    z-index: 10;
+    width: 50%;
+    transform-origin: right;
+    background-color: rgb(97, 219, 251);
+    transform: scaleX(100%);
+    transition: .5s ease-in-out;
+}
+
+@media screen and (max-width:800px) {
+    #button {
+        font-size: 10px;
+        width: 92%;
+    }
+}

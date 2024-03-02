@@ -56,6 +56,9 @@
 .m-h-50dvh {
   min-height: 50dvh;
 }
+.m-h-60dvh {
+  min-height: 60dvh;
+}
 .m-h-20dvh {
   min-height: 20dvh;
 }
@@ -71,7 +74,4 @@
 }
 .brightness-25 {
   filter: brightness(25%);
-}
-.w-90p {
-  width: 90%;
 }

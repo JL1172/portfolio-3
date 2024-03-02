@@ -15,7 +15,7 @@ function App() {
   };
   return (
     <GlobalContext.Provider value={{ changeBrightness, isDim }}>
-      <div className="text-white flex flex-col justify-evenly items-start h-auto m-h-600dvh bg-custom-black">
+      <div className="text-white flex flex-col justify-evenly items-start h-auto m-h-600dvh bg-custom-black ">
         <NavbarSection />
         <HomeSection />
         <AboutSection />
