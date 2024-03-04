@@ -14,10 +14,6 @@ export default function BackendStack(props: {
   const clearTech = () => {
     setTech("");
   }
-  const doubleChangeChoice = (val: number) => {
-    changeChoice(val);
-    setTimeout(()=>{changeChoice(val)}, 100)
-  }
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -32,7 +28,7 @@ export default function BackendStack(props: {
     unrenderedCard.forEach(element => observer.observe(element));
   }, []);
   return (
-    <div className="flex flex-col w-full min-h-dvh h-fit items-center ">
+    <div className="flex flex-col w-full min-h-dvh h-fit items-center fade-in-class ">
       <div className="flex justify-around w-full mt-10 text-lg min-h-20 items-center font-bold">
         <div
           onClick={() => setPersistedChoice(null)}
@@ -41,7 +37,7 @@ export default function BackendStack(props: {
           <BsArrowLeft className="arrow" /> Return
         </div>
         <div className="font-extrabold xxs:hidden xs:hidden sm:hidden md:hidden lg:block lg:text-5xl">FRONTEND STACK</div>
-        <div onClick={()=>doubleChangeChoice(0)} className="text-neutral-500 flex justify-evenly items-center cursor-pointer transition-colors hover:text-white hover:transition-colors relative hoverable-left-f">
+        <div onClick={()=>changeChoice(0)} className="text-neutral-500 flex justify-evenly items-center cursor-pointer transition-colors hover:text-white hover:transition-colors relative hoverable-left-f">
           View Backend
           <BsArrowRight className="arrow" />
         </div>

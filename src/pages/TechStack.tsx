@@ -79,7 +79,7 @@ export default function TechStackSection() {
           <BackendStack setPersistedChoice={setPersistedChoice} changeChoice = {changeChoice} />
         </div>
       ) : (
-        <div onClick={() => setPersistedChoice(null)} className="backend-text">
+        <div  className="backend-text">
           <FrontendStack setPersistedChoice={setPersistedChoice} changeChoice = {changeChoice}  />
         </div>
       )}
