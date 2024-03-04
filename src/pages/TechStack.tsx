@@ -3,6 +3,8 @@ import { GlobalContext } from "../contexts/GlobalContext";
 import "../styles/tech-stack.css";
 import { categories } from "../resources/tech-stack-data";
 import { Button } from "@mui/material";
+import BackendStack from "../components/BackendStackComponent";
+import FrontendStack from "../components/FrontendStackComponent";
 // 659 px for the cards
 export default function TechStackSection() {
   const [currentChoice, setCurrentChoice] = useState<
@@ -73,12 +75,12 @@ export default function TechStackSection() {
           </div>
         </>
       ) : persistedChoice === 0 ? (
-        <div onClick={() => setPersistedChoice(null)} className="backend-text">
-          backend
+        <div onClick={() => setPersistedChoice(null)} className="backend-text w-full min-h-dvh h-fit">
+          <BackendStack />
         </div>
       ) : (
         <div onClick={() => setPersistedChoice(null)} className="backend-text">
-          frontend
+          <FrontendStack />
         </div>
       )}
     </div>

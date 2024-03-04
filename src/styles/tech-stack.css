@@ -1,122 +1,139 @@
 @keyframes fadeIn {
-    100%{
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 .w-50p {
-    width: 50%;
+  width: 50%;
 }
 .m-w-90p {
-    min-width: 90%;
+  min-width: 90%;
 }
 #button {
-    padding: 0;
+  padding: 0;
 }
 
 .backend-closed::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    left:0;
-    z-index: 10;
-    width: 50%;
-    background-color: #E0234E;
-    transform-origin: left;
-    transform: scaleX(0%);
-    transition: .5s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  z-index: 10;
+  width: 50%;
+  background-color: #e0234e;
+  transform-origin: left;
+  transform: scaleX(0%);
+  transition: 0.5s ease-in-out;
 }
 .backend-closed::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    right:0;
-    z-index: 10;
-    width: 50%;
-    background-color: #E0234E;
-    transform-origin: right;
-    transform: scaleX(0%);
-    transition: .5s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 100%;
+  right: 0;
+  z-index: 10;
+  width: 50%;
+  background-color: #e0234e;
+  transform-origin: right;
+  transform: scaleX(0%);
+  transition: 0.5s ease-in-out;
 }
 .backend-curtain::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    left:0;
-    z-index: 10;
-    width: 50%;
-    transform-origin: left;
-    background-color: #E0234E;
-    transform: scaleX(100%);
-    transition: .5s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  z-index: 10;
+  width: 50%;
+  transform-origin: left;
+  background-color: #e0234e;
+  transform: scaleX(100%);
+  transition: 0.5s ease-in-out;
 }
 .backend-curtain::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    right:0;
-    z-index: 10;
-    width: 50%;
-    transform-origin: right;
-    background-color: #E0234E;
-    transform: scaleX(100%);
-    transition: .5s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 100%;
+  right: 0;
+  z-index: 10;
+  width: 50%;
+  transform-origin: right;
+  background-color: #e0234e;
+  transform: scaleX(100%);
+  transition: 0.5s ease-in-out;
 }
 .frontend-closed::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    left:0;
-    z-index: 10;
-    width: 50%;
-    background-color: rgb(97, 219, 251);
-    transform-origin: left;
-    transform: scaleX(0%);
-    transition: .5s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  z-index: 10;
+  width: 50%;
+  background-color: rgb(97, 219, 251);
+  transform-origin: left;
+  transform: scaleX(0%);
+  transition: 0.5s ease-in-out;
 }
 .frontend-closed::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    right:0;
-    z-index: 10;
-    width: 50%;
-    background-color: rgb(97, 219, 251);
-    transform-origin: right;
-    transform: scaleX(0%);
-    transition: .5s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 100%;
+  right: 0;
+  z-index: 10;
+  width: 50%;
+  background-color: rgb(97, 219, 251);
+  transform-origin: right;
+  transform: scaleX(0%);
+  transition: 0.5s ease-in-out;
 }
 .frontend-curtain::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    left:0;
-    z-index: 10;
-    width: 50%;
-    transform-origin: left;
-    background-color: rgb(97, 219, 251);
-    transform: scaleX(100%);
-    transition: .5s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  z-index: 10;
+  width: 50%;
+  transform-origin: left;
+  background-color: rgb(97, 219, 251);
+  transform: scaleX(100%);
+  transition: 0.5s ease-in-out;
 }
 .frontend-curtain::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    right:0;
-    z-index: 10;
-    width: 50%;
-    transform-origin: right;
-    background-color: rgb(97, 219, 251);
-    transform: scaleX(100%);
-    transition: .5s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 100%;
+  right: 0;
+  z-index: 10;
+  width: 50%;
+  transform-origin: right;
+  background-color: rgb(97, 219, 251);
+  transform: scaleX(100%);
+  transition: 0.5s ease-in-out;
 }
 .backend-text {
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
-    animation-delay: 1s;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 1s;
 }
-@media screen and (max-width:800px) {
-    #button {
-        font-size: 10px;
-        width: 92%;
-    }
+.cards-all {
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 35vw;
+  height: 10rem;
+  background-color: transparent;
+  outline: 1px solid rgb(27, 27, 27);
+  flex-basis: 30vw;
+}
+.icon-cards {
+    width : 8rem;
+    height : 8rem;
+ }
+ 
+@media screen and (max-width: 800px) {
+  #button {
+    font-size: 10px;
+    width: 92%;
+  }
 }
