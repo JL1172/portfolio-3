@@ -3,6 +3,8 @@
     opacity: 1;
   }
 }
+
+
 .w-50p {
   width: 50%;
 }
@@ -120,17 +122,128 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 35vw;
-  height: 10rem;
   background-color: transparent;
-  outline: 1px solid rgb(27, 27, 27);
-  flex-basis: 30vw;
+  outline: 1px solid rgb(21, 21, 21);
+  flex-basis: 30dvw;
 }
 .icon-cards {
     width : 8rem;
     height : 8rem;
  }
- 
+.hoverable-right::before {
+  content: "";
+  position: absolute;
+  background-color: #e0234e;
+  width: 100%;
+  right: 0;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  transition:.2s ease-in-out;
+}
+.hoverable-right:hover::before {
+  content: "";
+  position: absolute;
+  background-color: #e0234e;
+  height: 100%;
+  right: 0;
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  z-index: -1;
+  transform: scaleX(100%);
+  transition:.2s ease-in-out;
+  transform-origin: right;
+}
+.hoverable-left::before {
+  content: "";
+  position: absolute;
+  background-color: #e0234e;
+  width: 100%;
+  left: left;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  transition:.2s ease-in-out;
+}
+.hoverable-left:hover::before {
+  content: "";
+  position: absolute;
+  background-color: #e0234e;
+  height: 100%;
+  left: left;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  z-index: -1;
+  transform: scaleX(100%);
+  transition:.2s ease-in-out;
+  transform-origin: left;
+}
+.hoverable-right-f::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(97, 219, 251);
+  width: 100%;
+  right: 0;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  transition:.2s ease-in-out;
+}
+.hoverable-right-f:hover::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(97, 219, 251);
+  height: 100%;
+  right: 0;
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  z-index: -1;
+  transform: scaleX(100%);
+  transition:.2s ease-in-out;
+  transform-origin: right;
+}
+.hoverable-left-f::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(97, 219, 251);
+  width: 100%;
+  left: left;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  transition:.2s ease-in-out;
+}
+.hoverable-left-f:hover::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(97, 219, 251);
+  height: 100%;
+  left: left;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  z-index: -1;
+  transform: scaleX(100%);
+  transition:.2s ease-in-out;
+  transform-origin: left;
+}
+.unrendered-card {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 1s ease-in-out;
+}
+.rendered-card {
+  opacity: 1;
+  transform: scale(100%);
+  transition: all 1s ease-in-out;
+}
 @media screen and (max-width: 800px) {
   #button {
     font-size: 10px;
