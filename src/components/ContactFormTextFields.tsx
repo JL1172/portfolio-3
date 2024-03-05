@@ -7,19 +7,24 @@ export default function ContactFormTextFields() {
   const ctx = useContext(ContactFormContext);
   return (
     <ThemeProvider theme={theme}>
-      <span className="w-full flex flex-col items-center">
+      <span className="xxs:w-full xs:w-full sm:w-full md:w-1-2 lg:w-1/2 flex flex-col items-center mb-6">
         <TextField
-          className="form-inputs"
+          inputProps={{ style: { color: "white" } }}
+          // className="xxs:w-11/12 xs:w-11/12 md:1/2 lg:1/2"
+          className="w-full"
           name={"email"}
           value={ctx?.formData.email}
           onChange={(e) => ctx?.changeHandler(e.target.name, e.target.value)}
           InputLabelProps={{
             style: {
-              color: "white",
+              color:
+                ctx?.formData.emailErrorMessage &&
+                ctx?.formData.emailErrorMessage.length > 0
+                  ? ""
+                  : "white",
             },
           }}
           sx={{
-            width: "50%",
             bgcolor: "rgb(51,51,51)",
             "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
               borderColor:
@@ -43,7 +48,12 @@ export default function ContactFormTextFields() {
         />
         {ctx?.formData.emailErrorMessage &&
           ctx?.formData.emailErrorMessage.length > 0 && (
-            <Alert className="w-1/2 flex" variant="outlined" severity="error">
+            <Alert
+              // className="xxs:w-11/12 xs:w-11/12 md:1/2 lg:1/3 flex"
+              className="w-full"
+              variant="outlined"
+              severity="error"
+            >
               <div className="flex flex-col">
                 {ctx?.formData.emailErrorMessage.map((n, i) => {
                   return <span key={i}>{n}</span>;
@@ -52,21 +62,26 @@ export default function ContactFormTextFields() {
             </Alert>
           )}
       </span>
-      <span className="w-full flex flex-col items-center">
+      <span className="xxs:w-full xs:w-full sm:w-full md:w-1-2 lg:w-1/2 flex flex-col items-center text-white mb-6">
         <TextField
-          className="form-inputs"
+          inputProps={{ style: { color: "white" } }}
           name={"message"}
+          className="w-full"
+          // className="xxs:w-11/12 xs:w-11/12 md:1/2 lg:1/3"
           value={ctx?.formData.message}
           onChange={(e) => ctx?.changeHandler(e.target.name, e.target.value)}
-          multiline={true}
+          multiline
           minRows={5}
           InputLabelProps={{
             style: {
-              color: "white",
+              color:
+                ctx?.formData.messageErrorMessage &&
+                ctx?.formData.messageErrorMessage.length > 0
+                  ? ""
+                  : "white",
             },
           }}
           sx={{
-            width: "50%",
             bgcolor: "rgb(51,51,51)",
             "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
               borderColor:
@@ -90,7 +105,12 @@ export default function ContactFormTextFields() {
         />
         {ctx?.formData.messageErrorMessage &&
           ctx?.formData.messageErrorMessage.length > 0 && (
-            <Alert className="w-1/2" variant="outlined" severity="error">
+            <Alert
+              // className="xxs:w-11/12 xs:w-11/12 md:1/2 lg:1/3"
+              className="w-full"
+              variant="outlined"
+              severity="error"
+            >
               <div className="flex flex-col">
                 {ctx?.formData.messageErrorMessage.map((n, i) => {
                   return <span key={i}>{n}</span>;

@@ -21,6 +21,7 @@ export const theme = createTheme({
             },
           "& .MuiInputBase-input": {
             backgroundColor: "rgb(51,51,51)", // Adjust the background color
+            color: "white",
           },
         },
       },
