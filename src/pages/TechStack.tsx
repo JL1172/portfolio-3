@@ -55,7 +55,7 @@ export default function TechStackSection() {
                   <div>{n.cat_icon}</div>
                   <Button
                     onClick={() => changeChoice(i)}
-                    className="font-bold lg:w-3/4 md:w-11/12 sm:w-11/12 xs:w-11/12 h-8"
+                    className="font-bold lg:w-3/4 md:w-11/12 sm:w-11/12 xs:w-11/12 xxs:w-11/12 h-8"
                     sx={{
                       bgcolor: "white",
                       color: "black",

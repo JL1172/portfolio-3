@@ -10,6 +10,7 @@ export default {
         md: "800px", // Medium screens (small laptops)
         lg: "1024px", // Large screens (desktops)
         xl: "1280px", // Extra large screens (large desktops)
+        xxl: "1400px",
       },
     },
   },

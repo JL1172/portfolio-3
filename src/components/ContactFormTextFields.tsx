@@ -7,7 +7,7 @@ export default function ContactFormTextFields() {
   const ctx = useContext(ContactFormContext);
   return (
     <ThemeProvider theme={theme}>
-      <span className="xxs:w-full xs:w-full sm:w-full md:w-1-2 lg:w-1/2 flex flex-col items-center mb-6">
+      <span className="xxs:w-full xs:w-full sm:w-3/4 md:w-1-2 lg:w-1/2 xxl:w-4/12 flex flex-col items-center mb-6">
         <TextField
           inputProps={{ style: { color: "white" } }}
           // className="xxs:w-11/12 xs:w-11/12 md:1/2 lg:1/2"
@@ -62,7 +62,7 @@ export default function ContactFormTextFields() {
             </Alert>
           )}
       </span>
-      <span className="xxs:w-full xs:w-full sm:w-full md:w-1-2 lg:w-1/2 flex flex-col items-center text-white mb-6">
+      <span className="xxs:w-full xs:w-full sm:w-3/4 md:w-1-2 lg:w-1/2 xxl:w-4/12 flex flex-col items-center text-white mb-6">
         <TextField
           inputProps={{ style: { color: "white" } }}
           name={"message"}

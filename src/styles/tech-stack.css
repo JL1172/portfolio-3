@@ -249,9 +249,11 @@
   animation: fadeIn 1s ease-in-out forwards;
   animation-delay: 500ms;
 }
+#button {
+  font-size: 16;
+}
 @media screen and (max-width: 800px) {
   #button {
     font-size: 10px;
-    width: 92%;
   }
 }

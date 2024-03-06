@@ -12,7 +12,6 @@ const buttonSx = {
   paddingRight: "2rem",
   marginBottom: "1rem",
   height: "3rem",
-  width: "50%",
   bgcolor: green[500],
   "&:hover": {
     bgcolor: green[700],
@@ -36,14 +35,14 @@ export default function ContactFormButton() {
         marginBottom: "1rem",
         height: "3rem",
       }}
-      className="xxs:w-full xs:w-full sm:w-full md:w-1-2 lg:w-1/2"
+      className="xxs:w-full xs:w-full sm:w-3/4 md:w-1-2 lg:w-1/2 xxl:w-4/12"
     >
       Loading...
     </LoadingButton>
   ) : ctx?.formData.secondarySpinnerOn ? (
     <Button
       id="button"
-      className="xxs:w-full xs:w-full sm:w-full md:w-1-2 lg:w-1/2"
+      className="xxs:w-full xs:w-full sm:w-3/4 md:w-1-2 lg:w-1/2 xxl:w-4/12"
       variant="contained"
       sx={buttonSx}
     >
@@ -54,7 +53,7 @@ export default function ContactFormButton() {
     !ctx?.formData.spinnerOn &&
     !ctx?.formData.secondarySpinnerOn && (
       <Button
-        className="xxs:w-full xs:w-full sm:w-full md:w-1-2 lg:w-1/2"
+        className="xxs:w-full xs:w-full sm:w-3/4 md:w-1-2 lg:w-1/2 xxl:w-4/12"
         id="button"
         onClick={() => ctx?.submitForm()}
         sx={{
