@@ -1,13 +1,34 @@
 import { Alert, TextField, ThemeProvider } from "@mui/material";
 import { theme } from "../styles/text-field-theme";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ContactFormContext } from "../contexts/ContactFormContext";
+import "../styles/contact.css";
 
 export default function ContactFormTextFields() {
   const ctx = useContext(ContactFormContext);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("text-field-visible-1");
+        }
+      });
+    });
+    const observer1 = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("text-field-visible-2");
+        }
+      });
+    });
+    const textFieldOne = document.querySelectorAll(".text-field-hidden-1");
+    textFieldOne.forEach((element) => observer.observe(element));
+    const textFieldTwo = document.querySelectorAll(".text-field-hidden-2");
+    textFieldTwo.forEach((element) => observer1.observe(element));
+  }, []);
   return (
     <ThemeProvider theme={theme}>
-      <span className="xxs:w-full xs:w-full sm:w-3/4 md:w-1-2 lg:w-1/2 xxl:w-4/12 flex flex-col items-center mb-6">
+      <span className="xxs:w-full xs:w-full sm:w-3/4 md:w-1-2 lg:w-1/2 xxl:w-4/12 flex flex-col items-center mb-6 text-field-hidden-1">
         <TextField
           inputProps={{ style: { color: "white" } }}
           // className="xxs:w-11/12 xs:w-11/12 md:1/2 lg:1/2"
@@ -62,7 +83,7 @@ export default function ContactFormTextFields() {
             </Alert>
           )}
       </span>
-      <span className="xxs:w-full xs:w-full sm:w-3/4 md:w-1-2 lg:w-1/2 xxl:w-4/12 flex flex-col items-center text-white mb-6">
+      <span className="xxs:w-full xs:w-full sm:w-3/4 md:w-1-2 lg:w-1/2 xxl:w-4/12 flex flex-col items-center text-white mb-6 text-field-hidden-2">
         <TextField
           inputProps={{ style: { color: "white" } }}
           name={"message"}

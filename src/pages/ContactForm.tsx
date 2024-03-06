@@ -7,6 +7,7 @@ import { ContactFormContext } from "../contexts/ContactFormContext";
 import { instantiate_schema } from "../schema/contact-form-schema";
 import { Box, LinearProgress } from "@mui/material";
 import ContactFormSocials from "../components/ContactFormSocials";
+import "../styles/contact.css";
 
 export default function ContactSection() {
   const ctx = useContext(GlobalContext);

@@ -1,0 +1,25 @@
+@keyframes fadeIn {
+    100% {
+        color: white;
+        opacity: 1;
+    }
+}
+.text-field-hidden-1,.text-field-hidden-2 {
+    opacity: 0;
+    color: transparent;
+}
+.text-field-visible-1{
+    animation: fadeIn 1s ease-in-out forwards;
+}
+.text-field-visible-2{
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 500ms;
+}
+.hidden-button {
+    opacity: 0;
+}
+.visible-button {
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 750ms;
+    
+}

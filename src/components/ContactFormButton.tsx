@@ -2,9 +2,10 @@ import { Button } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
 import { green } from "@mui/material/colors";
 import { ContactFormContext } from "../contexts/ContactFormContext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { LoadingButton } from "@mui/lab";
 import SaveIcon from "@mui/icons-material/Save";
+import "../styles/contact.css";
 
 const buttonSx = {
   fontFamily: "inherit",
@@ -19,6 +20,17 @@ const buttonSx = {
 };
 export default function ContactFormButton() {
   const ctx = useContext(ContactFormContext);
+  useEffect(()=>{
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible-button");
+        }
+      })
+    })
+    const hiddenButton = document.querySelectorAll(".hidden-button");
+    hiddenButton.forEach(element=> observer.observe(element));
+  },[])
   return ctx?.formData.spinnerOn ? (
     <LoadingButton
       id="button"
@@ -53,7 +65,7 @@ export default function ContactFormButton() {
     !ctx?.formData.spinnerOn &&
     !ctx?.formData.secondarySpinnerOn && (
       <Button
-        className="xxs:w-full xs:w-full sm:w-3/4 md:w-1-2 lg:w-1/2 xxl:w-4/12"
+        className="xxs:w-full xs:w-full sm:w-3/4 md:w-1-2 lg:w-1/2 xxl:w-4/12 hidden-button"
         id="button"
         onClick={() => ctx?.submitForm()}
         sx={{
