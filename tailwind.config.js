@@ -1,10 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       screens: {
-        xxs:"300px",
+        xxs: "300px",
         xs: "480px", // Extra small screens (phones)
         sm: "640px", // Small screens (tablets)
         md: "800px", // Medium screens (small laptops)

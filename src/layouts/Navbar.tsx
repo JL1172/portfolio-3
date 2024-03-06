@@ -31,14 +31,14 @@ export default function NavbarSection() {
       <div className="flex w-90p justify-between items-center">
         <div className="flex flex-col justify-center h-fit">
           <div
-            className={`xl:text-5xl lg:text-5xl sm:text-4xl xs:text-3xl xxs:text-2xl opacity-0 animate-onload  ${
+            className={`xl:text-5xl lg:text-4xl sm:text-4xl xs:text-3xl xxs:text-2xl opacity-0 animate-onload  ${
               ctx?.isDim ? "brightness-25" : "brightness-100"
             }`}
           >
             Welcome To
           </div>
           <div
-            className={`xl:text-5xl lg:text-5xl sm:text-4xl xs:text-3xl xxs:text-2xl opacity-0 animate-onload ${
+            className={`xl:text-5xl lg:text-4xl sm:text-4xl xs:text-3xl xxs:text-2xl opacity-0 animate-onload ${
               ctx?.isDim ? "brightness-25" : "brightness-100"
             }`}
           >
