@@ -50,7 +50,7 @@ export default function NavbarSection() {
             return (
               <a
                 onClick={() => setActive(i)}
-                className={`flex items-center justify-center ${i !== links.length - 1 ? "mr-6" : ""} outline-custom-main md:w-20 md:text-sm lg:w-28 h-8 rounded-lg bg-custom-gray ${
+                className={`flex items-center justify-center ${i !== links.length - 1 ? "mr-6" : ""} outline-custom-main md:w-20 md:text-sm lg:w-28 lg:text-md h-8 rounded-lg bg-custom-gray ${
                   active === i ? "bg-custom-gray-active" : ""
                 }`}
                 key={i}

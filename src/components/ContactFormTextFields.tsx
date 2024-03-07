@@ -1,5 +1,4 @@
-import { Alert, ThemeProvider } from "@mui/material";
-import { theme } from "../styles/text-field-theme";
+import { Alert } from "@mui/material";
 import { useContext, useEffect } from "react";
 import { ContactFormContext } from "../contexts/ContactFormContext";
 import "../styles/contact.css";
@@ -27,67 +26,11 @@ export default function ContactFormTextFields() {
     textFieldTwo.forEach((element) => observer1.observe(element));
   }, []);
   return (
-    <ThemeProvider theme={theme}>
-      <span className=" xxs:w-full xs:w-full sm:w-3/4 md:w-1-2 lg:w-1/2 xxl:w-4/12 flex flex-col items-center mb-6 text-field-hidden-1">
-        {/* <TextField
-          inputProps={{ style: { color: "white" } }}
-          // className="xxs:w-11/12 xs:w-11/12 md:1/2 lg:1/2"
-          className="w-full"
-          name={"email"}
-          value={ctx?.formData.email}
-          onChange={(e) => ctx?.changeHandler(e.target.name, e.target.value)}
-          InputLabelProps={{
-            style: {
-              color:
-              ctx?.formData.emailErrorMessage &&
-              ctx?.formData.emailErrorMessage.length > 0
-              ? ""
-              : "white",
-            },
-          }}
-          sx={{
-            "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-            {
-              // borderColor: "transparent", // Set the border color to transparent
-            },
-            "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-              borderColor:
-              ctx?.formData.emailErrorMessage &&
-              ctx?.formData.emailErrorMessage.length > 0
-              ? "#f44336"
-              : "white",
-            },
-            "& .MuiInputLabel-root": {
-              color:
-              ctx?.formData.emailErrorMessage &&
-              ctx?.formData.emailErrorMessage.length > 0
-              ? "#f44336"
-              : "white",
-            },
-            "& .MuiInputLabel-shrink": {
-              color: "white",
-            },
-          }}
-          label={"Email*"}
-          />
-          {ctx?.formData.emailErrorMessage &&
-            ctx?.formData.emailErrorMessage.length > 0 && (
-              <Alert
-              // className="xxs:w-11/12 xs:w-11/12 md:1/2 lg:1/3 flex"
-              className="w-full"
-              variant="outlined"
-              severity="error"
-              >
-              <div className="flex flex-col">
-              {ctx?.formData.emailErrorMessage.map((n, i) => {
-                return <span key={i}>{n}</span>;
-              })}
-              </div>
-              </Alert>
-            )} */}
+    <>
+      <span className=" xxs:w-11/12 xs:w-3/4 sm:w-3/4 md:w-1-2 lg:w-1/2 xxl:w-4/12 mt-6 flex flex-col items-center mb-6 text-field-hidden-1 ">
         <input
           type="email"
-          id = "input-one"
+          id="input-one"
           style={{
             backgroundColor: "rgb(51,51,51)",
             height: "4rem",
@@ -101,7 +44,7 @@ export default function ContactFormTextFields() {
           onChange={(e) => ctx?.changeHandler(e.target.name, e.target.value)}
           name={"email"}
           value={ctx?.formData.email}
-          className="focus:ring-0 focus:border text-white w-full inputs border-none"
+          className="focus:ring-0 focus:border text-white w-full border-none text-lg"
         />
         {ctx?.formData.emailErrorMessage &&
           ctx?.formData.emailErrorMessage.length > 0 && (
@@ -111,7 +54,7 @@ export default function ContactFormTextFields() {
               variant="outlined"
               severity="error"
             >
-              <div className="flex flex-col">
+              <div className="flex flex-col font-bold text-red-500">
                 {ctx?.formData.emailErrorMessage.map((n, i) => {
                   return <span key={i}>{n}</span>;
                 })}
@@ -119,54 +62,10 @@ export default function ContactFormTextFields() {
             </Alert>
           )}
       </span>
-      <span className="xxs:w-full xs:w-full sm:w-3/4 md:w-1-2 lg:w-1/2 xxl:w-4/12 flex flex-col items-center text-white mb-6 text-field-hidden-2">
-        {/* <TextField
-          inputProps={{ style: { color: "white" } }}
-          name={"message"}
-          className="w-full"
-          // className="xxs:w-11/12 xs:w-11/12 md:1/2 lg:1/3"
-          value={ctx?.formData.message}
-          onChange={(e) => ctx?.changeHandler(e.target.name, e.target.value)}
-          multiline
-          minRows={5}
-          InputLabelProps={{
-            style: {
-              color:
-                ctx?.formData.messageErrorMessage &&
-                ctx?.formData.messageErrorMessage.length > 0
-                  ? ""
-                  : "white",
-            },
-          }}
-          sx={{
-            bgcolor: "rgb(51,51,51)",
-            "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-              {
-                // borderColor: 'transparent', // Set the border color to transparent
-              },
-            "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-              borderColor:
-                ctx?.formData.messageErrorMessage &&
-                ctx?.formData.messageErrorMessage.length > 0
-                  ? "#f44336"
-                  : "white",
-            },
-            "& .MuiInputLabel-root": {
-              color:
-                ctx?.formData.messageErrorMessage &&
-                ctx?.formData.messageErrorMessage.length > 0
-                  ? "#f44336"
-                  : "white",
-            },
-            "& .MuiInputLabel-shrink": {
-              color: "white",
-            },
-          }}
-          label={"Message*"}
-        /> */}
+      <span className=" xxs:w-11/12 xs:w-3/4 sm:w-3/4 md:w-1-2 lg:w-1/2 xxl:w-4/12 mt-6 flex flex-col items-center mb-6 text-field-hidden-1 ">
         <textarea
-        id = "input-two"
-          className="focus:ring-0 focus:border-none border-none w-full inputs"
+          id="input-two"
+          className="focus:ring-0 focus:border-none border-none w-full text-lg"
           placeholder="Message..."
           style={{
             minHeight: "5rem",
@@ -186,7 +85,7 @@ export default function ContactFormTextFields() {
               variant="outlined"
               severity="error"
             >
-              <div className="flex flex-col">
+              <div className="flex flex-col font-bold text-red-500">
                 {ctx?.formData.messageErrorMessage.map((n, i) => {
                   return <span key={i}>{n}</span>;
                 })}
@@ -194,6 +93,6 @@ export default function ContactFormTextFields() {
             </Alert>
           )}
       </span>
-    </ThemeProvider>
+    </>
   );
 }

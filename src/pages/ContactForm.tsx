@@ -33,7 +33,7 @@ export default function ContactSection() {
         <div className="font-bold text-4xl mt-10 mb-10">CONTACT ME</div>
         <form
           onSubmit={(e) => e.preventDefault()}
-          className=" w-11/12 m-h-80dvh h-fit flex flex-col justify-evenly items-center outline-custom-main"
+          className=" w-full m-h-70dvh h-fit flex flex-col justify-evenly items-center "
         >
           <ContactFormTextFields />
           <ContactFormButton />

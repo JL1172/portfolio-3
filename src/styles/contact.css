@@ -1,38 +1,46 @@
-
 @keyframes fadeIn {
-    100% {
-        color: white;
-        opacity: 1;
-    }
+  100% {
+    color: white;
+    opacity: 1;
+  }
 }
-.text-field-hidden-1,.text-field-hidden-2 {
-    opacity: 0;
-    color: transparent;
+.text-field-hidden-1,
+.text-field-hidden-2 {
+  opacity: 0;
+  color: transparent;
 }
-.text-field-visible-1{
-    animation: fadeIn 1s ease-in-out forwards;
+.text-field-visible-1 {
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 250ms;
 }
-.text-field-visible-2{
-    animation: fadeIn 1s ease-in-out forwards;
-    animation-delay: 500ms;
+.text-field-visible-2 {
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 750ms;
 }
 .hidden-button {
-    opacity: 0;
+  opacity: 0;
 }
 .visible-button {
-    animation: fadeIn 1s ease-in-out forwards;
-    animation-delay: 750ms;
-    
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 1250ms;
 }
-#input-one, #input-two {
-    border:none;
-    outline: 1px solid gray;
-    border-radius: 10px;
-    transition: outline-offset 150ms ease-in-out;
+#input-one,
+#input-two {
+  border: none;
+  outline: 2px solid gray;
+  color: white;
+  border-radius: 10px;
+  transition: outline-offset 150ms ease-in-out;
 }
-#input-one:focus, #input-two:focus {
-    border:none;
-outline: 1px solid white;
-outline-offset: 10px;
-transition: outline-offset 150ms ease-in-out;
+#input-one:focus,
+#input-two:focus {
+  border: none;
+  outline: 2px solid white;
+  outline-offset: 5px;
+  transition: outline-offset 150ms ease-in-out;
+}
+.m-h-70dvh {
+  min-height: 70dvh;
+  outline: 1px solid rgb(51, 51, 51);
+  width: 100%;
 }
