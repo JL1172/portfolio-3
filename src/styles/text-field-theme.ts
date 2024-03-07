@@ -13,7 +13,7 @@ export const theme = createTheme({
           },
           "&.Mui-focused .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
             {
-              borderColor: "yourFocusedColor", // Adjust the border color on focus
+              borderColor: "none", // Adjust the border color on focus
             },
           "&:focus-within .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
             {
@@ -21,7 +21,8 @@ export const theme = createTheme({
             },
           "& .MuiInputBase-input": {
             backgroundColor: "rgb(51,51,51)", // Adjust the background color
-            color: "white",
+            // backgroundColor:"transparent",
+            
           },
         },
       },

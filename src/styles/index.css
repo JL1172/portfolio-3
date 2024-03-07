@@ -9,6 +9,7 @@
     opacity: 1;
   }
 }
+
 /* paired animation class */
 .animate-onload {
   animation: onLoad 1s ease-in-out forwards;
