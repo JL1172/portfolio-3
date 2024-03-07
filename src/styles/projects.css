@@ -1,6 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @keyframes typewriter {
   0% {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
     color: dodgerblue;
   }
   100% {
@@ -9,84 +12,14 @@
     color: white;
   }
 }
-.fade-out {
+.hidden-span-title {
   opacity: 0;
 }
-.fade-in-1 {
+.visible-span-title {
   opacity: 0;
-  animation: typewriter 0.5s ease-in-out forwards;
-  animation-delay: 240ms;
+  animation: typewriter 1s ease-in-out forwards;
 }
-.fade-in-2 {
-  opacity: 0;
-  animation: typewriter 0.5s ease-in-out forwards;
-  animation-delay: 260ms;
-}
-.fade-in-3 {
-  opacity: 0;
-  animation: typewriter 0.5s ease-in-out forwards;
-  animation-delay: 280ms;
-}
-.fade-in-4 {
-  opacity: 0;
-  animation: typewriter 0.5s ease-in-out forwards;
-  animation-delay: 300ms;
-}
-.fade-in-5 {
-  opacity: 0;
-  animation: typewriter 0.5s ease-in-out forwards;
-  animation-delay: 320ms;
-}
-.fade-in-6 {
-  opacity: 0;
-  animation: typewriter 0.5s ease-in-out forwards;
-  animation-delay: 340ms;
-}
-.fade-in-7 {
-  opacity: 0;
-  animation: typewriter 0.5s ease-in-out forwards;
-  animation-delay: 360ms;
-}
-.fade-in-8 {
-  opacity: 0;
-  animation: typewriter 0.5s ease-in-out forwards;
-  animation-delay: 380ms;
-}
-.fade-in-9 {
-  opacity: 0;
-  animation: typewriter 0.5s ease-in-out forwards;
-  animation-delay: 400ms;
-}
-.fade-in-10 {
-  opacity: 0;
-  animation: typewriter 0.5s ease-in-out forwards;
-  animation-delay: 420ms;
-}
-.fade-in-11 {
-  opacity: 0;
-  animation: typewriter 0.5s ease-in-out forwards;
-  animation-delay: 440ms;
-}
-.fade-in-12 {
-  opacity: 0;
-  animation: typewriter 0.5s ease-in-out forwards;
-  animation-delay: 460ms;
-}
-.fade-in-13 {
-  opacity: 0;
-  animation: typewriter 0.5s ease-in-out forwards;
-  animation-delay: 480ms;
-}
-.fade-in-14 {
-  opacity: 0;
-  animation: typewriter 0.5s ease-in-out forwards;
-  animation-delay: 500ms;
-}
-.fade-in-15 {
-  opacity: 0;
-  animation: typewriter 0.5s ease-in-out forwards;
-  animation-delay: 520ms;
-}
+
 .description {
   width: 50%;
   height: 80%;
@@ -109,4 +42,85 @@
 }
 .h-120dvh {
   height: 120dvh;
+}
+.project-content {
+  display: flex !important;
+  align-items: center;
+}
+/* xxs: "300px",
+xs: "480px", // Extra small screens (phones)
+sm: "640px", // Small screens (tablets)
+md: "800px", // Medium screens (small laptops)
+lg: "1024px", // Large screens (desktops)
+xl: "1280px", // Extra large screens (large desktops)
+xxl: "1400px", */
+@media screen and (max-width: 1400px) {
+  .h-80dvh {
+    height: 70dvh;
+  }
+  .h-90dvh {
+    height: 80dvh;
+  }
+  .h-120dvh {
+    height: 100dvh;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .h-80dvh {
+    height: 60dvh;
+  }
+  .h-90dvh {
+    height: 70dvh;
+  }
+  .h-120dvh {
+    height: 90dvh;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .h-80dvh {
+    height: 60dvh;
+  }
+  .h-90dvh {
+    height: 70dvh;
+  }
+  .h-120dvh {
+    height: 90dvh;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .h-80dvh {
+    height: 90dvh;
+  }
+  .h-90dvh {
+    height: 100dvh;
+  }
+  .h-120dvh{
+    height: 120dvh;
+  }
+  .project-content {
+    flex-direction: column !important;
+    /* margin-top: 5rem; */
+  }
+  img, .description{
+    width: 95% !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .h-80dvh {
+    height: 80dvh;
+  }
+}
+@media screen and (max-width: 500px) {
+  .h-80dvh {
+    height: 70dvh;
+  }
+  .h-90dvh {
+    height: 90dvh;
+  }
+  .h-120dvh {
+    height: 110dvh;
+  }
+  img, .description{
+    width: 99% !important;
+  }
 }
