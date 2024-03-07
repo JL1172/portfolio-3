@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @keyframes typewriter {
   0% {
     transform: translateY(-8px);

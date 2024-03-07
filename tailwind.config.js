@@ -1,7 +1,12 @@
 /** @type {import('tailwindcss').Config} */
-
+import flowbitePlugin from 'flowbite/plugin';
+//TODO FIGURE OUT FLOWBITE PLUGIN
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    // "node_modules/flowbite-react/lib/esm/**/*.js",
+  ],
   theme: {
     extend: {
       screens: {
@@ -15,5 +20,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [ flowbitePlugin],
 };

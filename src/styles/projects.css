@@ -1,0 +1,112 @@
+@keyframes typewriter {
+  0% {
+    transform: translateY(-8px);
+    color: dodgerblue;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    color: white;
+  }
+}
+.fade-out {
+  opacity: 0;
+}
+.fade-in-1 {
+  opacity: 0;
+  animation: typewriter 0.5s ease-in-out forwards;
+  animation-delay: 240ms;
+}
+.fade-in-2 {
+  opacity: 0;
+  animation: typewriter 0.5s ease-in-out forwards;
+  animation-delay: 260ms;
+}
+.fade-in-3 {
+  opacity: 0;
+  animation: typewriter 0.5s ease-in-out forwards;
+  animation-delay: 280ms;
+}
+.fade-in-4 {
+  opacity: 0;
+  animation: typewriter 0.5s ease-in-out forwards;
+  animation-delay: 300ms;
+}
+.fade-in-5 {
+  opacity: 0;
+  animation: typewriter 0.5s ease-in-out forwards;
+  animation-delay: 320ms;
+}
+.fade-in-6 {
+  opacity: 0;
+  animation: typewriter 0.5s ease-in-out forwards;
+  animation-delay: 340ms;
+}
+.fade-in-7 {
+  opacity: 0;
+  animation: typewriter 0.5s ease-in-out forwards;
+  animation-delay: 360ms;
+}
+.fade-in-8 {
+  opacity: 0;
+  animation: typewriter 0.5s ease-in-out forwards;
+  animation-delay: 380ms;
+}
+.fade-in-9 {
+  opacity: 0;
+  animation: typewriter 0.5s ease-in-out forwards;
+  animation-delay: 400ms;
+}
+.fade-in-10 {
+  opacity: 0;
+  animation: typewriter 0.5s ease-in-out forwards;
+  animation-delay: 420ms;
+}
+.fade-in-11 {
+  opacity: 0;
+  animation: typewriter 0.5s ease-in-out forwards;
+  animation-delay: 440ms;
+}
+.fade-in-12 {
+  opacity: 0;
+  animation: typewriter 0.5s ease-in-out forwards;
+  animation-delay: 460ms;
+}
+.fade-in-13 {
+  opacity: 0;
+  animation: typewriter 0.5s ease-in-out forwards;
+  animation-delay: 480ms;
+}
+.fade-in-14 {
+  opacity: 0;
+  animation: typewriter 0.5s ease-in-out forwards;
+  animation-delay: 500ms;
+}
+.fade-in-15 {
+  opacity: 0;
+  animation: typewriter 0.5s ease-in-out forwards;
+  animation-delay: 520ms;
+}
+.description {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.h-80dvh {
+  height: 80dvh;
+}
+.h-90dvh {
+  height: 90dvh;
+}
+.h-95dvh {
+  height: 95dvh;
+}
+.h-70dvh {
+  height: 70dvh;
+}
+.h-120dvh {
+  height: 120dvh;
+}
