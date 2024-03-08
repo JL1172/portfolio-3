@@ -10,10 +10,12 @@
   color: transparent;
 }
 .text-field-visible-1 {
+  opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
   animation-delay: 250ms;
 }
 .text-field-visible-2 {
+  opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
   animation-delay: 750ms;
 }
@@ -21,6 +23,7 @@
   opacity: 0;
 }
 .visible-button {
+  opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
   animation-delay: 1250ms;
 }

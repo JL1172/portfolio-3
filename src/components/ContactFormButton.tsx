@@ -40,7 +40,7 @@ export default function ContactFormButton() {
       variant="outlined"
       sx={{
         bgcolor: "white",
-        color: "blue",
+        color: "black",
         fontFamily: "inherit",
         paddingLeft: "2rem",
         paddingRight: "2rem",

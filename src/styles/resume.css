@@ -1,0 +1,67 @@
+@keyframes slideFromRight {
+    100% {
+        transform: translateX(0);
+        color: white;
+        opacity: 1;
+    }
+}
+@keyframes slideFromLeft {
+    100% {
+        transform: translateX(0);
+        color: white;
+        opacity: 1;
+    }
+}
+@keyframes slideAndTrail {
+    5% {
+        background-color: magenta;
+        transform: scaleX(30%);
+    }
+    20%{
+        background-color: purple;
+        transform: scaleX(30%);
+    }
+    35% {
+        background-color: dodgerblue;
+        transform: scaleX(30%);
+    }
+    50% {
+        transform: scaleX(20%);
+        background-color: blueviolet;
+    }
+    65% {
+        background-color: lightgreen;
+        transform: scaleX(30%);
+    }
+    100% {
+        transform: translateX(1000%) scaleX(30%);
+        background-color: blue;
+        opacity: 0;
+        display: none;
+    }
+}
+.text-hidden, .button-hidden-2 {
+    opacity: 0;
+}
+.visible-button-beneath {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideFromRight 1s ease-in-out forwards;
+}
+.visible-text {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideFromLeft 1s ease-in-out forwards;
+}
+.visible-text::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-origin: left;
+    transform: scaleX(0%) translateX(-100%);
+    background-color: magenta;
+    z-index: -1;
+    animation: slideAndTrail 2s ease-in-out forwards;
+    animation-delay: 500ms;
+}
