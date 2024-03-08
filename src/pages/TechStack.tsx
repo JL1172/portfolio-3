@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { GlobalContext } from "../contexts/GlobalContext";
 import "../styles/tech-stack.css";
 import { categories } from "../resources/tech-stack-data";
@@ -25,31 +25,6 @@ export default function TechStackSection() {
     }
   };
   const ctx = useContext(GlobalContext);
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("tech-stack-card-visible-0");
-        } else {
-          entry.target.classList.remove("tech-stack-card-visible-0");
-        }
-      });
-    });
-
-    const observer2 = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("tech-stack-card-visible-1");
-        } else {
-          entry.target.classList.remove("tech-stack-card-visible-1");
-        }
-      });
-    });
-    const cardOne = document.querySelectorAll(".tech-stack-card-hidden-0");
-    cardOne.forEach((element) => observer.observe(element));
-    const cardTwo = document.querySelectorAll(".tech-stack-card-hidden-1");
-    cardTwo.forEach((element) => observer2.observe(element));
-  }, []);
   return (
     <div
       id="techstack"
@@ -75,7 +50,7 @@ export default function TechStackSection() {
             {categories.map((n, i) => {
               return (
                 <div
-                  className={`outline-custom-main min-h-80 h-fit lg:w-80 md:basis-80 sm:basis-72 xs:basis-60 xxs:basis-40 flex flex-col items-center justify-evenly tech-stack-card-hidden-${i}`}
+                  className={`outline-custom-main min-h-80 h-fit lg:w-80 md:basis-80 sm:basis-72 xs:basis-60 xxs:basis-40 flex flex-col items-center justify-evenly animate-pulse hover:animate-none`}
                   key={i}
                 >
                   <div>{n.cat_icon}</div>

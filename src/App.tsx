@@ -7,6 +7,7 @@ import HomeSection from "./pages/Home";
 import ProjectSection from "./pages/Projects";
 import ResumeSection from "./pages/Resume";
 import TechStackSection from "./pages/TechStack";
+import Footer from "./layouts/Footer";
 
 function App() {
   const [isDim, setIsDim] = useState<boolean>(false);
@@ -23,6 +24,7 @@ function App() {
         <ProjectSection />
         <ResumeSection />
         <ContactSection />
+        <Footer />
       </div>
     </GlobalContext.Provider>
   );

@@ -7,35 +7,6 @@
     opacity: 1;
   }
 }
-@keyframes slideFromRight {
-  100% {
-    transform: translateX(0);
-    color: white;
-    opacity: 1;
-  }
-}
-@keyframes slideFromLeft {
-  100% {
-    transform: translateX(0);
-    color: white;
-    opacity: 1;
-  }
-}
-
-.tech-stack-card-hidden-0,
-.tech-stack-card-hidden-1 {
-  opacity: 0;
-}
-.tech-stack-card-visible-0 {
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slideFromLeft 1s ease-in-out forwards;
-}
-.tech-stack-card-visible-1 {
-  opacity: 0;
-  transform: translateX(100%);
-  animation: slideFromRight 1s ease-in-out forwards;
-}
 
 
 .w-50p {

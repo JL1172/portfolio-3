@@ -20,6 +20,7 @@ export default function HomeSection() {
   const ctx = useContext(GlobalContext);
   return (
     <div
+    id = "home"
       className={`text-white flex flex-col justify-evenly bg-custom-main outline-custom-main min-h-screen w-full h-auto ${
         ctx?.isDim ? "brightness-25" : "brightness-100"
       }`}
