@@ -10,11 +10,12 @@ const contactMeData = [
     url: "mailto:jacoblang127@gmail.com",
   },
 ];
+//TODO have to fix this page
 export default function Footer() {
   return (
-    <div className="text-white w-full h-80 bg-color-custom-gray-footer flex justify-evenly items-baseline pt-14">
-      <div className="flex flex-col w-1/6 h-1/2 first:justify-evenly">
-        <div className="text-2xl font-bold">Socials</div>
+    <div className="text-white w-full h-96 bg-color-custom-gray-footer flex justify-evenly items-center">
+      <div className="flex flex-col basis-1/2  h-1/2">
+        <div className="text-2xl font-bold mb-6">Socials</div>
         <div className="flex w-full ">
           {contactMeData.map((n, i) => {
             return (
@@ -30,7 +31,7 @@ export default function Footer() {
           })}
         </div>
       </div>
-      <div className="flex flex-col w-1/6 h-1/2 first:justify-evenly" >
+      <div className="flex flex-col w-1/6 h-1/2 first:justify-evenly basis-1/2 " >
         <div className="text-2xl font-bold">Directory</div>
         <a href="#home">Top of Page</a>
         <a href="#about">About Me</a>

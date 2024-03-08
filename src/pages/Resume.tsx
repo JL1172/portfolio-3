@@ -37,7 +37,7 @@ export default function ResumeSection() {
         ctx?.isDim ? "brightness-25" : "brightness-100"
       } flex flex-col justify-center items-center`}
     >
-      <div className="text-hidden  mb-10 relative">
+      <div className="text-hidden  mb-10 relative xxs:text-sm xs:text-md sm:text-md md:text-xl lg:text-2xl">
         Below is a link to my CV, I look forward to meeting you
       </div>
       <Button
