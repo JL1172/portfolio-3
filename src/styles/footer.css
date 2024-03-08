@@ -1,3 +1,17 @@
 .bg-color-custom-gray-footer {
     background-color: rgb(51,51,51);
 }
+.outline-custom-footer {
+    outline: 1px solid rgb(21,21,21);
+
+}
+.border-right-custom {
+    border-right: 1px solid gray;
+}
+.h-50dvh-footer {
+min-height: 60dvh;
+height: fit-content;
+}
+.h-custom {
+    height: 20rem;
+}
