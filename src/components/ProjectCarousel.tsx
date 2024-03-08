@@ -68,7 +68,7 @@ export const ProjectCarousel = () => {
     const hiddenButton = document.querySelectorAll(".hidden-button-projects");
     hiddenButton.forEach((element) => observer3.observe(element));
     const hiddenPicture = document.querySelectorAll(".hidden-picture");
-    hiddenPicture.forEach(element=> observer4.observe(element));
+    hiddenPicture.forEach((element) => observer4.observe(element));
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -76,9 +76,9 @@ export const ProjectCarousel = () => {
   return (
     <div className="w-full h-90dvh flex items-center justify-center mt-10 relative">
       <Carousel
-      slide= {windowWidth>=700}
-      slideInterval={5000}
-        draggable = {windowWidth >= 500}
+        slide={false}
+        slideInterval={5000}
+        draggable={windowWidth >= 600 ? true : false}
         indicators={true}
         id="carousel"
         className=" h-full"
@@ -99,7 +99,11 @@ export const ProjectCarousel = () => {
               className="xxs:w-full xs:w-full sm:w-full md:w-full lg:w-full max-h-fit h-80dvh project-content"
               key={i}
             >
-              <img src={n.img} alt={n.title} className="w-3/4 h-80dvh hidden-picture" />
+              <img
+                src={n.img}
+                alt={n.title}
+                className="w-3/4 h-80dvh hidden-picture"
+              />
               <div className="w-full h-80dvh flex flex-col items-center justify-evenly rounded-md description">
                 <div className="font-bold flex flex-col items-center justify-center xxs:text-2xl xs:text-2xl sm:text-xl md:text-xl lg:text-xl xl:text-2xl hidden-span-title w-11/12  ">
                   {n.title}
