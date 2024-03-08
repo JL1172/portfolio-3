@@ -2,12 +2,18 @@ import "../styles/projects.css";
 import { projectData } from "../resources/projects-data";
 import { Carousel } from "flowbite-react";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@mui/material";
 
 export const ProjectCarousel = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const images = projectData;
+
   useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -44,6 +50,15 @@ export const ProjectCarousel = () => {
         }
       });
     });
+    const observer4 = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible-pic");
+        } else {
+          entry.target.classList.remove("visible-pic");
+        }
+      });
+    });
     const hiddenSpan = document.querySelectorAll(".hidden-span-title");
     hiddenSpan.forEach((element) => observer.observe(element));
     const hiddenDescription = document.querySelectorAll(".hidden-description");
@@ -52,23 +67,29 @@ export const ProjectCarousel = () => {
     hiddenTech.forEach((element) => observer2.observe(element));
     const hiddenButton = document.querySelectorAll(".hidden-button-projects");
     hiddenButton.forEach((element) => observer3.observe(element));
-
+    const hiddenPicture = document.querySelectorAll(".hidden-picture");
+    hiddenPicture.forEach(element=> observer4.observe(element));
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
   return (
-    <div className="w-full h-90dvh flex items-center justify-center mt-10">
+    <div className="w-full h-90dvh flex items-center justify-center mt-10 relative">
       <Carousel
-        slide={false}
-        className="w-full h-full"
+      slide= {windowWidth>=700}
+      slideInterval={5000}
+        draggable = {windowWidth >= 500}
+        indicators={true}
+        id="carousel"
+        className=" h-full"
         leftControl={
           <BiLeftArrow
-          className="xxs:hidden xs:block"
-            style={{ color: "lightgreen", width: "2rem", height: "2rem" }}
+            style={{ color: "gray", width: "2rem", height: "2rem" }}
           />
         }
         rightControl={
           <BiRightArrow
-          className="xxs:hidden xs:block"
-            style={{ color: "lightgreen", width: "2rem", height: "2rem" }}
+            style={{ color: "gray", width: "2rem", height: "2rem" }}
           />
         }
       >
@@ -78,7 +99,7 @@ export const ProjectCarousel = () => {
               className="xxs:w-full xs:w-full sm:w-full md:w-full lg:w-full max-h-fit h-80dvh project-content"
               key={i}
             >
-              <img src={n.img} alt={n.title} className="w-3/4 h-80dvh" />
+              <img src={n.img} alt={n.title} className="w-3/4 h-80dvh hidden-picture" />
               <div className="w-full h-80dvh flex flex-col items-center justify-evenly rounded-md description">
                 <div className="font-bold flex flex-col items-center justify-center xxs:text-2xl xs:text-2xl sm:text-xl md:text-xl lg:text-xl xl:text-2xl hidden-span-title w-11/12  ">
                   {n.title}
@@ -86,7 +107,9 @@ export const ProjectCarousel = () => {
                     Category: {n.category}
                   </div>
                 </div>
-                <div className="w-11/12 xxs:text-md xs:text-md sm:text-md md:text-sm lg:text-md xl:text-md xxl:text-lg hidden-description">{n.description}</div>
+                <div className="w-11/12 xxs:text-md xs:text-md sm:text-md md:text-sm lg:text-md xl:text-md xxl:text-lg hidden-description">
+                  {n.description}
+                </div>
                 <div className="text-2xl font-semibold flex flex-col justify-evenly items-center  w-11/12 min-h-1/3 h-fit hidden-tech">
                   Technologies Used:
                   <div className="flex justify-evenly flex-wrap h-3/4 mt-4 mb-2">
@@ -101,7 +124,9 @@ export const ProjectCarousel = () => {
                 </div>
                 <div className="w-11/12 flex items-center justify-center ">
                   <Button
-                    href={n.githubUrl !== undefined ? n.githubUrl : n.linkedinUrl}
+                    href={
+                      n.githubUrl !== undefined ? n.githubUrl : n.linkedinUrl
+                    }
                     className="lg:w-11/12 md:w-11/12 sm:w-11/12 xs:w-11/12 xxs:w-11/12 h-10 hidden-button-projects"
                     sx={{
                       bgcolor: "royalblue",

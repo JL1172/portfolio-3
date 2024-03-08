@@ -65,3 +65,35 @@
     animation: slideAndTrail 2s ease-in-out forwards;
     animation-delay: 500ms;
 }
+#resume-text {
+    font-size: 30px;
+}
+#downloadButton {
+    width: fit-content;
+}
+@media screen and (max-width: 800px) {
+    #resume-text {
+        font-size: 24px;
+    }
+    #downloadButton {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 650px) {
+    #resume-text {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 550px) {
+    #resume-text {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 500px) {
+    #resume-text {
+        font-size: 15px;
+    }
+    #downloadButton {
+        width: 75%;
+    }
+}

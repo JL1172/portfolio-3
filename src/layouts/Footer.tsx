@@ -50,7 +50,7 @@ const navData = [
 ];
 export default function Footer() {
   return (
-    <div className="text-white w-full h-50dvh-footer bg-color-custom-gray-footer flex flex-col justify-evenly outline-custom-footer items-center">
+    <div className="text-white w-full h-50dvh-footer bg-color-custom-gray-footer flex flex-col justify-evenly outline-custom-footer items-center mt-20">
       <div className="w-full flex justify-evenly h-custom">
         <div className="flex flex-col items-center basis-1/2 h-full border-right-custom">
           <div className="text-2xl font-bold">Socials</div>

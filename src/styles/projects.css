@@ -12,6 +12,12 @@
     color: white;
   }
 }
+@keyframes fadePicIn {
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
 @keyframes slideIn {
   100% {
     transform: translateX(0%);
@@ -48,22 +54,25 @@
 .visible-b{
   opacity: 0;
   color: transparent;
-  /* z-index: -1; */
+  z-index: -1;
   transform: translateX(-100%);
   animation: slideFromRight 1s ease-in-out forwards;
 }
 .visible-span-title {
+  z-index: -1;
   opacity: 0;
   transform: translateY(-100%);
   animation: typewriter 1s ease-in-out forwards;
 }
 .visible-description {
+  z-index: -1;
   opacity: 0;
   transform: translateX(100%);
   transform-origin: right;
   animation: slideIn 1s ease-in-out forwards;
 }
 .visible-tech {
+  z-index: -1;
   opacity: 0;
   transform: translateY(100%);
   animation: slideInBottom 1s ease-in-out forwards;
@@ -96,13 +105,9 @@
   align-items: center;
   height: fit-content;
 }
-/* xxs: "300px",
-xs: "480px", // Extra small screens (phones)
-sm: "640px", // Small screens (tablets)
-md: "800px", // Medium screens (small laptops)
-lg: "1024px", // Large screens (desktops)
-xl: "1280px", // Extra large screens (large desktops)
-xxl: "1400px", */
+#carousel {
+  width: 97%;
+}
 @media screen and (max-width: 1400px) {
   .h-80dvh {
     height: 70dvh;
@@ -149,7 +154,9 @@ xxl: "1400px", */
   .project-content {
     flex-direction: column !important;
     justify-content: center;
-    outline: 1px solid rgb(51, 51, 51);
+    /* outline: 1px solid rgb(51, 51, 51); */
+    background-color: rgb(41, 40, 40);
+
   }
   .hidden-span-title,
   .hidden-description,
@@ -160,16 +167,20 @@ xxl: "1400px", */
   .description {
     width: 98% !important;
   }
+  img {
+    height: 60dvh !important;
+    margin-top: 1rem;
+  }
 }
 @media screen and (max-width: 800px) {
   .h-80dvh {
-    height: 100dvh;
+    height: 105dvh;
   }
   .h-90dvh {
-    height: 110dvh;
+    height: 115dvh;
   }
   .h-120dvh {
-    height: 130dvh;
+    height: 140dvh;
   }
   img,
   .description {
@@ -181,9 +192,20 @@ xxl: "1400px", */
 }
 
 @media screen and (max-width: 500px) {
+  .project-content {
+    width: 100%;
+  }
   img,
   .description {
     width: 100% !important;
+  }
+  .hidden-picture {
+    opacity: 0;
+  }
+  .visible-pic {
+    transform: translateX(-100%);
+    z-index: 2;
+    animation: fadePicIn 1s ease-in-out forwards;
   }
 }
 @media screen and (max-width: 480px) {
