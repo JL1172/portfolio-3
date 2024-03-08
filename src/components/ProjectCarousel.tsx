@@ -53,23 +53,26 @@ export const ProjectCarousel = () => {
                    *
                    */}
                   {n.title}
-                <div className="text-lg text-gray-500 font-semibold mb-10">
-                  Category: {n.category}
+                  <div className="text-lg text-gray-500 font-semibold mb-10">
+                    Category: {n.category}
+                  </div>
                 </div>
-                </div>
-                <div className="w-11/12">
-                  {n.description}
-                </div>
+                <div className="w-11/12">{n.description}</div>
                 <div className="text-2xl font-semibold flex flex-col justify-evenly items-center  w-11/12 h-1/2 mt-6">
-                   Technologies Used:
-                   <div className="flex justify-evenly flex-wrap h-3/4">
-                   {n.stack.map((icon,i) => {
-                    return <span className="mx-6" key = {i}>{icon}</span>
-                   })}
-                   </div>
+                  Technologies Used:
+                  <div className="flex justify-evenly flex-wrap h-3/4">
+                    {n.stack.map((icon, i) => {
+                      return (
+                        <span className="mx-6" key={i}>
+                          {icon}
+                        </span>
+                      );
+                    })}
+                  </div>
                 </div>
                 <div className="w-11/12 flex items-center justify-center mb-10">
-                <Button
+                  <Button
+                    href={n.githubUrl !== undefined ? n.githubUrl : n.linkedinUrl}
                     className="font-bold lg:w-3/4 md:w-11/12 sm:w-11/12 xs:w-11/12 xxs:w-11/12 h-8"
                     sx={{
                       bgcolor: "royalblue",
@@ -81,7 +84,7 @@ export const ProjectCarousel = () => {
                     }}
                     variant="contained"
                   >
-                    Explore {n.title}
+                    Explore {n.title.split(" ").slice(0, 2).join(" ")}
                   </Button>
                 </div>
               </div>

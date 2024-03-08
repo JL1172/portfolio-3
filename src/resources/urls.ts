@@ -9,4 +9,5 @@ export const urlDict = {
   expenseTrackerGithubUrl: "https://github.com/JL1172/Expense-Tracker",
   npmPackageGithubUrl:"https://github.com/stars/JL1172/lists/npm-packages",
   nodeSpaceBackend:"https://github.com/JL1172/node-space-backend",
+  authenticationMicroservice: "https://github.com/JL1172/auth-microservice-api",
 };
