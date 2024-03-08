@@ -86,8 +86,8 @@ export const projectData = [
     stack: [<FaNode color="#68a063" className="w-12 h-12"/>, <SiTypescript color="#007acc" className="w-12 h-12"/>],
   },
   {
-    title: "Node Space RESTful API",
-    category: "Backend Application",
+    title: "Node-Space REST API",
+    category: "Backend",
     githubUrl: urlDict.nodeSpaceBackend,
     img: authentication,
     description:
@@ -101,12 +101,12 @@ export const projectData = [
     ],
   },
   {
-    title: "Authentication Microservice",
-    category: "Backend Application",
+    title: "Auth-Microservice",
+    category: "Backend",
     githubUrl: urlDict.authenticationMicroservice,
     img: authMicro,
     description:
-      "I created this RESTful API to streamline authentication and authorization services for myself and other colleagues. I found that I had a strong need for an authentication-microservice in many of my projects and wanted to challenge myself to create a secure, robust RESTful API with Nestjs. ",
+      "I created this RESTful API to streamline authentication and authorization services for myself and other colleagues. I had a strong need for an auth-microservice in many of my projects and wanted to challenge myself to create a secure, robust RESTful API. ",
     stack: [
       <FaNode color="#68a063" className="w-12 h-12"/>,
       <SiTypescript color="#007acc" className="w-12 h-12"/>,

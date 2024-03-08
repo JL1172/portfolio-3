@@ -29,7 +29,7 @@
   align-items: center;
 }
 .h-80dvh {
-  height: 80dvh;
+  height: 82dvh;
 }
 .h-90dvh {
   height: 90dvh;
@@ -41,11 +41,12 @@
   height: 70dvh;
 }
 .h-120dvh {
-  height: 120dvh;
+  height: 115dvh;
 }
 .project-content {
   display: flex !important;
   align-items: center;
+  height: fit-content;
 }
 /* xxs: "300px",
 xs: "480px", // Extra small screens (phones)
@@ -67,60 +68,81 @@ xxl: "1400px", */
 }
 @media screen and (max-width: 1300px) {
   .h-80dvh {
-    height: 60dvh;
+    height: 77dvh;
   }
   .h-90dvh {
-    height: 70dvh;
+    height: 80dvh;
   }
   .h-120dvh {
-    height: 90dvh;
+    height: 100dvh;
   }
 }
 @media screen and (max-width: 1200px) {
   .h-80dvh {
-    height: 60dvh;
+    height: 75dvh;
   }
   .h-90dvh {
-    height: 70dvh;
-  }
-  .h-120dvh {
-    height: 90dvh;
-  }
-}
-@media screen and (max-width: 1100px) {
-  .h-80dvh {
-    height: 90dvh;
-  }
-  .h-90dvh {
-    height: 100dvh;
-  }
-  .h-120dvh{
-    height: 120dvh;
-  }
-  .project-content {
-    flex-direction: column !important;
-    /* margin-top: 5rem; */
-  }
-  img, .description{
-    width: 95% !important;
-  }
-}
-@media screen and (max-width: 700px) {
-  .h-80dvh {
     height: 80dvh;
-  }
-}
-@media screen and (max-width: 500px) {
-  .h-80dvh {
-    height: 70dvh;
-  }
-  .h-90dvh {
-    height: 90dvh;
   }
   .h-120dvh {
     height: 110dvh;
   }
+}
+@media screen and (max-width: 1100px) {
+  .h-80dvh {
+    height: 130dvh;
+  }
+  .h-90dvh {
+    height: 130dvh;
+  }
+  .h-120dvh{
+    height: 150dvh;
+  }
+  .project-content {
+    flex-direction: column !important;
+    justify-content: center;
+  }
   img, .description{
-    width: 99% !important;
+    width: 98% !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  .h-80dvh {
+    height: 100dvh;
+  } 
+  .h-90dvh {
+    height: 110dvh;
+  }
+  .h-120dvh {
+    height: 130dvh;
+  }
+  img, .description{
+    width: 95% !important;
+  }
+  img {
+    height: 50dvh !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  img, .description{
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .h-80dvh {
+    height: 130dvh;
+  } 
+  .h-90dvh {
+    height: 140dvh;
+  }
+  .h-120dvh {
+    height: 160dvh;
+  }
+  img, .description{
+    width: 95% !important;
+  }
+  img {
+    height: 50dvh !important;
   }
 }
