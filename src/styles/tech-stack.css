@@ -7,6 +7,35 @@
     opacity: 1;
   }
 }
+@keyframes slideFromRight {
+  100% {
+    transform: translateX(0);
+    color: white;
+    opacity: 1;
+  }
+}
+@keyframes slideFromLeft {
+  100% {
+    transform: translateX(0);
+    color: white;
+    opacity: 1;
+  }
+}
+
+.tech-stack-card-hidden-0,
+.tech-stack-card-hidden-1 {
+  opacity: 0;
+}
+.tech-stack-card-visible-0 {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideFromLeft 1s ease-in-out forwards;
+}
+.tech-stack-card-visible-1 {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideFromRight 1s ease-in-out forwards;
+}
 
 
 .w-50p {
@@ -131,9 +160,9 @@
   flex-basis: 30dvw;
 }
 .icon-cards {
-    width : 8rem;
-    height : 8rem;
- }
+  width: 8rem;
+  height: 8rem;
+}
 .hoverable-right::before {
   content: "";
   position: absolute;
@@ -145,7 +174,7 @@
   transform-origin: right;
   border-top-left-radius: 3rem;
   border-bottom-left-radius: 3rem;
-  transition:.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .hoverable-right:hover::before {
   content: "";
@@ -157,7 +186,7 @@
   border-bottom-left-radius: 3rem;
   z-index: -1;
   transform: scaleX(100%);
-  transition:.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   transform-origin: right;
 }
 .hoverable-left::before {
@@ -171,7 +200,7 @@
   transform-origin: left;
   border-top-right-radius: 3rem;
   border-bottom-right-radius: 3rem;
-  transition:.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .hoverable-left:hover::before {
   content: "";
@@ -183,7 +212,7 @@
   border-bottom-right-radius: 3rem;
   z-index: -1;
   transform: scaleX(100%);
-  transition:.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   transform-origin: left;
 }
 .hoverable-right-f::before {
@@ -197,7 +226,7 @@
   transform-origin: right;
   border-top-left-radius: 3rem;
   border-bottom-left-radius: 3rem;
-  transition:.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .hoverable-right-f:hover::before {
   content: "";
@@ -209,7 +238,7 @@
   border-bottom-left-radius: 3rem;
   z-index: -1;
   transform: scaleX(100%);
-  transition:.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   transform-origin: right;
 }
 .hoverable-left-f::before {
@@ -223,7 +252,7 @@
   transform-origin: left;
   border-top-right-radius: 3rem;
   border-bottom-right-radius: 3rem;
-  transition:.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .hoverable-left-f:hover::before {
   content: "";
@@ -235,7 +264,7 @@
   border-bottom-right-radius: 3rem;
   z-index: -1;
   transform: scaleX(100%);
-  transition:.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   transform-origin: left;
 }
 .unrendered-card {

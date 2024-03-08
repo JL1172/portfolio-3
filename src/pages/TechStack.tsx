@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../contexts/GlobalContext";
 import "../styles/tech-stack.css";
 import { categories } from "../resources/tech-stack-data";
@@ -25,10 +25,36 @@ export default function TechStackSection() {
     }
   };
   const ctx = useContext(GlobalContext);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("tech-stack-card-visible-0");
+        } else {
+          entry.target.classList.remove("tech-stack-card-visible-0");
+        }
+      });
+    });
+
+    const observer2 = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("tech-stack-card-visible-1");
+        } else {
+          entry.target.classList.remove("tech-stack-card-visible-1");
+        }
+      });
+    });
+    const cardOne = document.querySelectorAll(".tech-stack-card-hidden-0");
+    cardOne.forEach((element) => observer.observe(element));
+    const cardTwo = document.querySelectorAll(".tech-stack-card-hidden-1");
+    cardTwo.forEach((element) => observer2.observe(element));
+  }, []);
   return (
-    <div id = "techstack"
+    <div
+      id="techstack"
       // id = {currentChoice === 1 ? "frontend-curtain" : "frontend-closed"}
-      className={`text-white flex flex-col justify-center items-center mt-10 bg-custom-main outline-custom-main m-h-80dvh h-fit w-full relative ${
+      className={`text-white flex flex-col justify-center items-center mt-10 bg-custom-main outline-custom-main m-h-80dvh h-fit w-full relative overflow-hidden ${
         ctx?.isDim ? "brightness-25" : "brightness-100"
       } ${
         currentChoice[0] === 0
@@ -45,11 +71,11 @@ export default function TechStackSection() {
       {persistedChoice === null ? (
         <>
           <div className="text-4xl font-bold ">TECH STACK</div>
-          <div className="min-w-full w-fit m-h-60dvh h-fit flex items-center justify-evenly ">  
+          <div className="min-w-full w-fit m-h-60dvh h-fit flex items-center justify-evenly ">
             {categories.map((n, i) => {
               return (
                 <div
-                  className={`outline-custom-main min-h-80 h-fit lg:w-80 md:basis-80 sm:basis-72 xs:basis-60 xxs:basis-40 flex flex-col items-center justify-evenly`}
+                  className={`outline-custom-main min-h-80 h-fit lg:w-80 md:basis-80 sm:basis-72 xs:basis-60 xxs:basis-40 flex flex-col items-center justify-evenly tech-stack-card-hidden-${i}`}
                   key={i}
                 >
                   <div>{n.cat_icon}</div>
@@ -76,11 +102,17 @@ export default function TechStackSection() {
         </>
       ) : persistedChoice === 0 ? (
         <div className="backend-text w-full min-h-dvh h-fit">
-          <BackendStack setPersistedChoice={setPersistedChoice} changeChoice = {changeChoice} />
+          <BackendStack
+            setPersistedChoice={setPersistedChoice}
+            changeChoice={changeChoice}
+          />
         </div>
       ) : (
-        <div  className="backend-text">
-          <FrontendStack setPersistedChoice={setPersistedChoice} changeChoice = {changeChoice}  />
+        <div className="backend-text">
+          <FrontendStack
+            setPersistedChoice={setPersistedChoice}
+            changeChoice={changeChoice}
+          />
         </div>
       )}
     </div>
