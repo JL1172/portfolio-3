@@ -93,12 +93,24 @@ export const ProjectCarousel = () => {
         className=" h-full "
         leftControl={
           <BiLeftArrow
-            style={{position:"absolute", left: "0", color: "gray", width: "2rem", height: "2rem" }}
+            style={{
+              position: "absolute",
+              left: "0",
+              color: "gray",
+              width: "2rem",
+              height: "2rem",
+            }}
           />
         }
         rightControl={
           <BiRightArrow
-            style={{position:"absolute", right: "0", color: "gray", width: "2rem", height: "2rem" }}
+            style={{
+              position: "absolute",
+              right: "0",
+              color: "gray",
+              width: "2rem",
+              height: "2rem",
+            }}
           />
         }
       >
@@ -120,10 +132,14 @@ export const ProjectCarousel = () => {
                     Category: {n.category}
                   </div>
                 </div>
-                <div className={`w-11/12 xxs:text-md xs:text-md sm:text-md md:text-sm lg:text-md xl:text-md xxl:text-lg hidden-description `}>
+                <div
+                  className={`w-11/12 xxs:text-md xs:text-md sm:text-md md:text-sm lg:text-md xl:text-md xxl:text-lg hidden-description `}
+                >
                   {n.description}
                 </div>
-                <div className={`text-2xl font-semibold flex flex-col justify-evenly items-center  w-11/12 min-h-1/3 h-fit hidden-tech `}>
+                <div
+                  className={`text-2xl font-semibold flex flex-col justify-evenly items-center  w-11/12 min-h-1/3 h-fit hidden-tech `}
+                >
                   Technologies Used:
                   <div className="flex justify-evenly flex-wrap h-3/4 mt-4 mb-2">
                     {n.stack.map((icon, i) => {
@@ -135,11 +151,12 @@ export const ProjectCarousel = () => {
                     })}
                   </div>
                 </div>
-                <div className="w-11/12 flex items-center justify-center mb-2 relative">
+                <a
+                  href={n.githubUrl !== undefined ? n.githubUrl : n.linkedinUrl}
+                  target="_blank"
+                  className="w-11/12 flex items-center justify-center mb-2  z-10"
+                >
                   <Button
-                    href={
-                      n.githubUrl !== undefined ? n.githubUrl : n.linkedinUrl
-                    }
                     className="lg:w-11/12 md:w-11/12 sm:w-11/12 xs:w-11/12 xxs:w-11/12 h-10  hidden-button-projects"
                     sx={{
                       bgcolor: "royalblue",
@@ -155,7 +172,7 @@ export const ProjectCarousel = () => {
                     Explore {n.title.split(" ").slice(0, 2).join(" ")}
                   </Button>
                   {/* <TbLayoutNavbarCollapse style={{position:"absolute", right:"0", color: "white", width: "2rem", height: "2rem", cursor:"pointer"}} onClick={() => setCollapse(!collapse)}/> */}
-                </div> 
+                </a>
               </div>
             </div>
           );
