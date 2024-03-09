@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../contexts/GlobalContext";
 import { Button } from "@mui/material";
 import { urlDict } from "../resources/urls";
@@ -6,13 +6,19 @@ import "../styles/resume.css";
 
 export default function ResumeSection() {
   const ctx = useContext(GlobalContext);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
   useEffect(() => {
+    const handleResize = () => {
+      setWindowSize(window.innerWidth);
+    };
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible-text");
         } else {
-          entry.target.classList.remove("visible-text");
+          if (windowSize >= 600) {
+            entry.target.classList.remove("visible-text");
+          }
         }
       });
     });
@@ -21,7 +27,9 @@ export default function ResumeSection() {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible-button-beneath");
         } else {
-          entry.target.classList.remove("visible-button-beneath");
+          if (windowSize >= 600) {
+            entry.target.classList.remove("visible-button-beneath");
+          }
         }
       });
     });
@@ -29,6 +37,9 @@ export default function ResumeSection() {
     hiddenText.forEach((element) => observer.observe(element));
     const hiddenButton = document.querySelectorAll(".button-hidden-2");
     hiddenButton.forEach((element) => observer2.observe(element));
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
   return (
     <div
@@ -37,8 +48,8 @@ export default function ResumeSection() {
         ctx?.isDim ? "brightness-25" : "brightness-100"
       } flex flex-col justify-center items-center`}
     >
-      <div className="text-hidden  mb-10 relative " id = "resume-text">
-        Below is a link to my CV, I look forward to meeting you
+      <div className="text-hidden  mb-10 relative " id="resume-text">
+        Below is a link to my CV, I look forward to meeting you.
       </div>
       <Button
         className="button-hidden-2"

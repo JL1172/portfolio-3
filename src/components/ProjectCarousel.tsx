@@ -4,14 +4,15 @@ import { Carousel } from "flowbite-react";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 import { useEffect, useState } from "react";
 import { Button } from "@mui/material";
+// import { TbLayoutNavbarCollapse } from "react-icons/tb";
 
 export const ProjectCarousel = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const images = projectData;
-
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  // const [collapse,setCollapse] = useState(false);
   useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+      setWindowSize(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);
     const observer = new IntersectionObserver((entries) => {
@@ -19,7 +20,9 @@ export const ProjectCarousel = () => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible-span-title");
         } else {
-          entry.target.classList.remove("visible-span-title");
+          if (windowSize >= 600) {
+            entry.target.classList.remove("visible-span-title");
+          }
         }
       });
     });
@@ -28,7 +31,9 @@ export const ProjectCarousel = () => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible-description");
         } else {
-          entry.target.classList.remove("visible-description");
+          if (windowSize >= 600) {
+            entry.target.classList.remove("visible-description");
+          }
         }
       });
     });
@@ -37,7 +42,9 @@ export const ProjectCarousel = () => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible-tech");
         } else {
-          entry.target.classList.remove("visible-tech");
+          if (windowSize >= 600) {
+            entry.target.classList.remove("visible-tech");
+          }
         }
       });
     });
@@ -46,7 +53,9 @@ export const ProjectCarousel = () => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible-b");
         } else {
-          entry.target.classList.remove("visible-b");
+          if (windowSize >= 600) {
+            entry.target.classList.remove("visible-b");
+          }
         }
       });
     });
@@ -55,7 +64,9 @@ export const ProjectCarousel = () => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible-pic");
         } else {
-          entry.target.classList.remove("visible-pic");
+          if (windowSize >= 600) {
+            entry.target.classList.remove("visible-pic");
+          }
         }
       });
     });
@@ -73,23 +84,21 @@ export const ProjectCarousel = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   return (
-    <div className="w-full h-90dvh flex items-center justify-center mt-10 relative">
+    <div className="w-full h-90dvh flex items-center justify-center mt-10">
       <Carousel
         slide={false}
-        slideInterval={5000}
-        draggable={windowWidth >= 600 ? true : false}
-        indicators={true}
         id="carousel"
-        className=" h-full"
+        className=" h-full "
         leftControl={
           <BiLeftArrow
-            style={{ color: "gray", width: "2rem", height: "2rem" }}
+            style={{position:"absolute", left: "0", color: "gray", width: "2rem", height: "2rem" }}
           />
         }
         rightControl={
           <BiRightArrow
-            style={{ color: "gray", width: "2rem", height: "2rem" }}
+            style={{position:"absolute", right: "0", color: "gray", width: "2rem", height: "2rem" }}
           />
         }
       >
@@ -111,10 +120,10 @@ export const ProjectCarousel = () => {
                     Category: {n.category}
                   </div>
                 </div>
-                <div className="w-11/12 xxs:text-md xs:text-md sm:text-md md:text-sm lg:text-md xl:text-md xxl:text-lg hidden-description">
+                <div className={`w-11/12 xxs:text-md xs:text-md sm:text-md md:text-sm lg:text-md xl:text-md xxl:text-lg hidden-description `}>
                   {n.description}
                 </div>
-                <div className="text-2xl font-semibold flex flex-col justify-evenly items-center  w-11/12 min-h-1/3 h-fit hidden-tech">
+                <div className={`text-2xl font-semibold flex flex-col justify-evenly items-center  w-11/12 min-h-1/3 h-fit hidden-tech `}>
                   Technologies Used:
                   <div className="flex justify-evenly flex-wrap h-3/4 mt-4 mb-2">
                     {n.stack.map((icon, i) => {
@@ -126,12 +135,12 @@ export const ProjectCarousel = () => {
                     })}
                   </div>
                 </div>
-                <div className="w-11/12 flex items-center justify-center ">
+                <div className="w-11/12 flex items-center justify-center mb-2 relative">
                   <Button
                     href={
                       n.githubUrl !== undefined ? n.githubUrl : n.linkedinUrl
                     }
-                    className="lg:w-11/12 md:w-11/12 sm:w-11/12 xs:w-11/12 xxs:w-11/12 h-10 hidden-button-projects"
+                    className="lg:w-11/12 md:w-11/12 sm:w-11/12 xs:w-11/12 xxs:w-11/12 h-10  hidden-button-projects"
                     sx={{
                       bgcolor: "royalblue",
                       color: "white",
@@ -145,7 +154,8 @@ export const ProjectCarousel = () => {
                   >
                     Explore {n.title.split(" ").slice(0, 2).join(" ")}
                   </Button>
-                </div>
+                  {/* <TbLayoutNavbarCollapse style={{position:"absolute", right:"0", color: "white", width: "2rem", height: "2rem", cursor:"pointer"}} onClick={() => setCollapse(!collapse)}/> */}
+                </div> 
               </div>
             </div>
           );
