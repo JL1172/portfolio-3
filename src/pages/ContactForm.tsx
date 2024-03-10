@@ -32,6 +32,7 @@ export default function ContactSection() {
       >
         <div className="font-bold text-4xl mt-10 mb-10">CONTACT ME</div>
         <form
+        id = "form"
           onSubmit={(e) => e.preventDefault()}
           className=" w-full m-h-70dvh h-fit flex flex-col justify-evenly items-center "
         >

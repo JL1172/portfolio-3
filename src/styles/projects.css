@@ -177,7 +177,7 @@
     width: 98% !important;
   }
   img {
-    height: 60dvh !important;
+    height: 60dvh;
     margin-top: 2rem;
   }
 }
