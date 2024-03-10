@@ -20,8 +20,8 @@ export default function ProjectMobile() {
   const [collapse, setCollapse] = useState(true);
 
   return (
-    <div className="mobile-div ">
-      <div className="text-4xl font-bold heading-1">PROJECTS</div>
+    <div id = "projects" className="mobile-div ">
+      <div id = "projects" className="text-4xl font-bold heading-1">PROJECTS</div>
       <div id="wrapper">
         {projectData.map((n, i) => {
           return (
