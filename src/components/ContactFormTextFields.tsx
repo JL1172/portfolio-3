@@ -64,6 +64,9 @@ export default function ContactFormTextFields() {
       </span>
       <span className=" xxs:w-11/12 xs:w-3/4 sm:w-3/4 md:w-1-2 lg:w-1/2 xxl:w-4/12 mt-6 flex flex-col items-center mb-6 text-field-hidden-1 ">
         <textarea
+          onChange={(e) => ctx?.changeHandler(e.target.name, e.target.value)}
+          name={"message"}
+          value={ctx?.formData.message}
           id="input-two"
           className="focus:ring-0 focus:border-none border-none w-full text-lg"
           placeholder="Message..."
