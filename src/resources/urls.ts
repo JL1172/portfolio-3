@@ -10,6 +10,6 @@ export const urlDict = {
   npmPackageGithubUrl: "https://github.com/stars/JL1172/lists/npm-packages",
   nodeSpaceBackend: "https://github.com/JL1172/node-space-backend",
   authenticationMicroservice: "https://github.com/JL1172/auth-microservice-api",
-  resume: "https://1drv.ms/w/s!AgsJlcR3TIuWwqVvjZEoDXRGacKrrA?e=Ha1VFy",
+  resume: "https://docs.google.com/file/d/145cDy9FeOI-mxc1l7SsUa5oDM3pskOse/edit?usp=docslist_api&filetype=msword",
   thisRepo: "https://github.com/JL1172/portfolio-3",
 };
